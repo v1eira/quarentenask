@@ -92,6 +92,7 @@ export const Question = styled.span`
 
   @media (max-width: 950px) {
     max-width: 50vw;
+    font-size: 20px;
   }
 `;
 
@@ -140,6 +141,7 @@ export const Answer = styled.span`
 
   @media (max-width: 950px) {
     max-width: 50vw;
+    font-size: 16px;
   }
 
   @media (max-width: 400px) {
