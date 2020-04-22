@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Wrapper, Header, Content, Post } from './styles';
+// import LeftBar from '../../components/LeftBar';
+// import RightBar from '../../components/RightBar';
+import TimeLine from '../../components/TimeLine';
+
+import { Wrapper, Header, Content } from './styles';
 
 // import { Container } from './styles';
 
@@ -13,35 +17,7 @@ export default function Home() {
       </Header>
 
       <Content>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <TimeLine />
       </Content>
     </Wrapper>
   );

@@ -28,22 +28,8 @@ export const Header = styled.div`
 `;
 
 export const Content = styled.div`
-  margin: 100px auto 20px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-
-  > ul {
-    margin-top: 10px;
-  }
-`;
-
-export const Post = styled.ul`
-  background: #fff;
-  width: 720px;
-  height: 120px;
-  border-radius: 6px;
 `;
 
 export const Profile = styled.div`
