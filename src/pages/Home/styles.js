@@ -24,6 +24,11 @@ export const Header = styled.div`
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 `;
 
