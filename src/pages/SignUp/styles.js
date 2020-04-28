@@ -11,10 +11,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  margin-top: 25vh !important;
+  margin-top: 17.5vh !important;
   margin: auto;
   width: 480px;
-  height: 50vh;
+  height: 65vh;
 
   background: #fff;
   border-radius: 12px;
@@ -28,7 +28,6 @@ export const Container = styled.div`
     width: 160px;
     height: 160px;
     padding: 30px;
-    margin-bottom: 20px;
   }
 
   a {
