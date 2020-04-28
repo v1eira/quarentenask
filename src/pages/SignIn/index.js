@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaEnvelope, FaKey } from 'react-icons/fa';
 
+import Q from '../../assets/quarentenask.svg';
+
 import {
   Wrapper,
   Container,
@@ -14,7 +16,7 @@ export default function SignIn() {
   return (
     <Wrapper>
       <Container>
-        <img src="https://svgsilh.com/svg/146011.svg" alt="img" />
+        <img src={Q} alt="img" />
         <InputField>
           <FaEnvelope size={20} />
           <input type="email" name="email" placeholder="email@email.com" />
