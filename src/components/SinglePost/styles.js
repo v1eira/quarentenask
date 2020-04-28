@@ -98,7 +98,7 @@ export const Question = styled.span`
 
 export const Separator = styled.div`
   margin: 5px 0 10px;
-  border-top: 1px dashed #fff;
+  border-top: 1px solid #555;
 
   @media (max-width: 400px) {
     margin: 15px 0;

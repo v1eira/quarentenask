@@ -51,24 +51,20 @@ export const Container = styled.div`
 export const InputField = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 250px;
 
   input {
-    background: #141419;
+    background: transparent;
     border: 0;
-    border-radius: 4px;
+    border-bottom: 1px solid #000;
     height: 40px;
-    padding: 0 15px;
-    color: #fff;
+    padding: 0 20px;
+    color: #000;
 
     &::placeholder {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(0, 0, 0, 0.7);
     }
-  }
-
-  svg {
-    margin-right: 10px;
   }
 `;
 
