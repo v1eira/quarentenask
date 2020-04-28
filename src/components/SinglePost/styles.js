@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.li`
   background: #141419;
-  width: 720px;
+  width: 640px;
   border-radius: 12px;
-  padding: 15px;
+  padding: 10px;
 
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@ export const Container = styled.li`
     word-wrap: break-word;
   }
 
-  @media (max-width: 950px) {
+  @media (max-width: 800px) {
     width: 80vw;
   }
 `;
@@ -30,8 +30,8 @@ export const QuestionInfo = styled.div`
   }
 
   img {
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     padding: 10px;
   }
@@ -86,13 +86,11 @@ export const Time = styled.span`
 `;
 
 export const Question = styled.span`
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 16px;
   color: #fff;
 
   @media (max-width: 950px) {
     max-width: 50vw;
-    font-size: 20px;
   }
 `;
 
@@ -116,8 +114,8 @@ export const AnswerInfo = styled.div`
   }
 
   img {
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     padding: 10px;
   }
@@ -136,12 +134,11 @@ export const AnswerContent = styled.div`
 `;
 
 export const Answer = styled.span`
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
 
   @media (max-width: 950px) {
     max-width: 50vw;
-    font-size: 16px;
   }
 
   @media (max-width: 400px) {
