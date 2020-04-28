@@ -11,8 +11,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  margin-top: 25vh !important;
   margin: auto;
+  margin-top: 25vh;
   width: 480px;
   height: 50vh;
 
@@ -38,6 +38,16 @@ export const Container = styled.div`
 
   @media (max-width: 600px) {
     width: 80vw;
+  }
+
+  @media (max-height: 800px) {
+    height: 65vh;
+    margin-top: 17.5vh;
+  }
+
+  @media (max-width: 350px) and (max-height: 800px) {
+    padding: 10px;
+    margin-top: calc(17.5vh - 10px);
   }
 `;
 
