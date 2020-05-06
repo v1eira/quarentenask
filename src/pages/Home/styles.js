@@ -7,17 +7,20 @@ export const Wrapper = styled.div`
   overflow-y: auto;
   position: fixed;
 
-  background: #2f303a;
+  background: #000;
 `;
 
 export const Header = styled.div`
-  background: #141419;
+  background: #000;
   width: 100%;
+  height: 27px;
   border-radius: 2px;
   display: flex;
   align-items: center;
   position: fixed;
   padding: 20px;
+
+  border-bottom: 1px solid #333;
 
   a {
     text-decoration: none;
@@ -35,6 +38,7 @@ export const Header = styled.div`
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
+  margin: 90px 0 20px;
 `;
 
 export const Profile = styled.div`

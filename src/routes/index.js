@@ -5,6 +5,7 @@ import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 
 import Home from '../pages/Home';
+import Profile from '../pages/Profile';
 
 export default function Routes() {
   return (
@@ -13,6 +14,7 @@ export default function Routes() {
       <Route path="/signup" component={SignUp} />
 
       <Route path="/home" component={Home} />
+      <Route path="/profile" component={Profile} />
     </Switch>
   );
 }

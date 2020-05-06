@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin: 100px auto 20px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,7 +13,7 @@ export const PostList = styled.ul`
   margin: 0;
   padding: 0;
 
-  > li {
-    margin-top: 20px;
+  li + li {
+    margin-top: 10px;
   }
 `;

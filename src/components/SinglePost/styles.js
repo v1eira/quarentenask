@@ -33,7 +33,7 @@ export const QuestionInfo = styled.div`
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    padding: 10px;
+    padding: 5px;
   }
 `;
 
@@ -117,7 +117,7 @@ export const AnswerInfo = styled.div`
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    padding: 10px;
+    padding: 5px;
   }
 `;
 

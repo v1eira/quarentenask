@@ -25,7 +25,7 @@ export default function SinglePost() {
       <QuestionInfo>
         <Link to="/home">
           <img
-            src="https://pbs.twimg.com/profile_images/1251792094580158465/HsYGhLlN_400x400.jpg"
+            src="https://pbs.twimg.com/profile_images/1257135002787160064/6awV-Oil_400x400.jpg"
             alt="img"
           />
         </Link>
@@ -38,7 +38,7 @@ export default function SinglePost() {
               <Time>2 h</Time>
             </Link>
           </UserInfo>
-          <Question>Lansa p nois: o que vc acha do Cobus?</Question>
+          <Question>O que você acha do Cobus?</Question>
         </QuestionContent>
       </QuestionInfo>
 
@@ -47,14 +47,14 @@ export default function SinglePost() {
       <AnswerInfo>
         <AnswerContent>
           <UserInfo>
-            <Link to="/home">
+            <Link to="/profile">
               <Name>V.</Name>
               <User>@v1eira</User>
               <span>-</span>
               <Time>Agora</Time>
             </Link>
           </UserInfo>
-          <Answer>Putz, maluco brabo d+.</Answer>
+          <Answer>Po, maluco brabo d+. Toca muito!</Answer>
           <Likes>
             <Link to="/home">
               <FaRegHeart color="#666" />
@@ -64,7 +64,7 @@ export default function SinglePost() {
             </Link>
           </Likes>
         </AnswerContent>
-        <Link to="/home">
+        <Link to="/profile">
           <img
             src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
             alt="img"
