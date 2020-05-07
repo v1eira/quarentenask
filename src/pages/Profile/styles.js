@@ -236,21 +236,30 @@ export const FollowButton = styled.button`
   display: flex;
   align-items: center;
 
-  border: 1px solid #999;
+  border: 1px solid transparent;
   border-radius: 20px;
   background: inherit;
   padding: 10px 15px;
 
   span {
     margin-left: 5px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     color: #999;
+    display: none;
   }
 
   &:hover {
     border-color: #fff;
     background: ${lighten(0.05, '#000')};
+
+    span {
+      display: block;
+    }
+
+    svg {
+      width: 15px !important;
+    }
 
     span,
     svg {

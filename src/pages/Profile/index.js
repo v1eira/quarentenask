@@ -105,7 +105,7 @@ export default function Home() {
                 </Link>
               </Followers>
               <FollowButton>
-                <FaHeart size={13} color="#999" />
+                <FaHeart size={20} color="#999" />
                 <span>Seguir</span>
               </FollowButton>
             </Stats>
