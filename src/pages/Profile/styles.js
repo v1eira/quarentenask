@@ -259,20 +259,73 @@ export const FollowButton = styled.button`
   }
 `;
 
-export const Message = styled.div`
+export const Question = styled.div`
   width: 100%;
-  margin: 10px 0;
-  padding: 25px 0;
+  margin: 30px 0 0;
   align-self: center;
-  text-align: center;
-  border-radius: 12px;
 
-  background: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    width: 100%;
+    padding: 15px 0;
+    background: #0d0d0d;
+    border: 0;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    resize: none;
+
+    &:focus {
+      & + button {
+        display: block;
+      }
+    }
+
+    ::placeholder {
+      padding-top: 20px;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    display: none;
+  }
+
+  textarea + button {
+    margin-top: 15px;
+  }
+`;
+
+export const QuestionButton = styled.button`
+  width: 100px;
+  padding: 10px;
+  background: inherit;
+  border: 1px solid #999;
+  border-radius: 50px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-self: flex-end;
 
   span {
-    color: #fff;
-    font-size: 16px;
-    word-wrap: break-word;
+    font-size: 15px;
+    color: #999;
+  }
+
+  &:hover {
+    border-color: #fff;
+    background: ${lighten(0.05, '#000')};
+
+    span,
+    svg {
+      color: #fff !important;
+    }
   }
 `;
 

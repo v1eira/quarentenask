@@ -26,7 +26,8 @@ import {
   Following,
   Followers,
   FollowButton,
-  Message,
+  Question,
+  QuestionButton,
   TimelineSelector,
 } from './styles';
 
@@ -58,9 +59,6 @@ export default function Home() {
                 <span>Editar perfil</span>
               </EditButton>
             </NameAndUser>
-            <Message>
-              <span>Descrição</span>
-            </Message>
             <SocialMedia>
               <FaInstagram size={20} />
               <a
@@ -111,6 +109,17 @@ export default function Home() {
                 <span>Seguir</span>
               </FollowButton>
             </Stats>
+            <Question>
+              <textarea
+                name="question"
+                id="question"
+                rows="3"
+                placeholder="Faça-me uma pergunta"
+              />
+              <QuestionButton>
+                <span>Enviar</span>
+              </QuestionButton>
+            </Question>
           </ProfileInfo>
 
           <TimelineSelector>
