@@ -135,6 +135,7 @@ export const EditButton = styled.button`
   }
 
   &:hover {
+    border-color: #fff;
     background: ${lighten(0.05, '#000')};
     span {
       color: #fff;
@@ -225,6 +226,36 @@ export const Followers = styled.div`
     margin-left: 5px;
     color: #999;
     font-weight: normal;
+  }
+`;
+
+export const FollowButton = styled.button`
+  margin-left: auto;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #999;
+  border-radius: 20px;
+  background: inherit;
+  padding: 10px 15px;
+
+  span {
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #999;
+  }
+
+  &:hover {
+    border-color: #fff;
+    background: ${lighten(0.05, '#000')};
+
+    span,
+    svg {
+      color: #fff !important;
+    }
   }
 `;
 

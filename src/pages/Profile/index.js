@@ -6,6 +6,7 @@ import {
   FaBirthdayCake,
   FaMapMarkerAlt,
   FaRegCalendarAlt,
+  FaHeart,
 } from 'react-icons/fa';
 
 import TimeLine from '../../components/TimeLine';
@@ -24,6 +25,7 @@ import {
   Stats,
   Following,
   Followers,
+  FollowButton,
   Message,
   TimelineSelector,
 } from './styles';
@@ -104,6 +106,10 @@ export default function Home() {
                   <span>seguidores</span>
                 </Link>
               </Followers>
+              <FollowButton>
+                <FaHeart size={13} color="#999" />
+                <span>Seguir</span>
+              </FollowButton>
             </Stats>
           </ProfileInfo>
 
