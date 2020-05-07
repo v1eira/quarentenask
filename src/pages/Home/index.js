@@ -1,20 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-// import LeftBar from '../../components/LeftBar';
-// import RightBar from '../../components/RightBar';
+import Header from '../../components/Header';
 import TimeLine from '../../components/TimeLine';
 
-import { Wrapper, Header, Content } from './styles';
+import { Wrapper, Content } from './styles';
 
 // import { Container } from './styles';
 
 export default function Home() {
   return (
     <Wrapper>
-      <Header>
-        <Link to="/home">QuarentenAsk</Link>
-      </Header>
+      <Header />
 
       <Content>
         <TimeLine />

@@ -10,31 +10,6 @@ export const Wrapper = styled.div`
   background: #000;
 `;
 
-export const Header = styled.div`
-  background: #000;
-  width: 100%;
-  height: 27px;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  padding: 20px;
-
-  border-bottom: 1px solid #333;
-
-  a {
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    opacity: 0.8;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-`;
-
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;

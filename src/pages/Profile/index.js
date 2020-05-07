@@ -9,11 +9,11 @@ import {
   FaHeart,
 } from 'react-icons/fa';
 
+import Header from '../../components/Header';
 import TimeLine from '../../components/TimeLine';
 
 import {
   Wrapper,
-  Header,
   Profile,
   Content,
   ProfileInfo,
@@ -34,9 +34,7 @@ import {
 export default function Home() {
   return (
     <Wrapper>
-      <Header>
-        <Link to="/home">QuarentenAsk</Link>
-      </Header>
+      <Header />
 
       <Profile>
         <Images>
