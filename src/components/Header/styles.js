@@ -11,6 +11,7 @@ export const Container = styled.div`
   justify-content: space-between;
   position: fixed;
   padding: 20px;
+  z-index: 1;
 
   border-bottom: 1px solid #333;
 

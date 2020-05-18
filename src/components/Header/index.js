@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import {
   FaHome,
@@ -12,11 +12,17 @@ import {
 import { Container, NavigationIcons, NavButton, LogoutButton } from './styles';
 
 export default function Home() {
+  const history = useHistory();
+
   return (
     <Container>
       <Link to="/home">QuarentenAsk</Link>
       <NavigationIcons>
-        <NavButton>
+        <NavButton
+          onClick={() => {
+            history.push('/home');
+          }}
+        >
           <FaHome size={30} color="#fff" opacity={0.8} />
         </NavButton>
 
@@ -28,7 +34,11 @@ export default function Home() {
           <FaHandHoldingHeart size={30} color="#fff" opacity={0.8} />
         </NavButton>
 
-        <NavButton>
+        <NavButton
+          onClick={() => {
+            history.push('/profile');
+          }}
+        >
           <FaUser size={30} color="#fff" opacity={0.8} />
         </NavButton>
       </NavigationIcons>
