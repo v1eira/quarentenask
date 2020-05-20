@@ -42,7 +42,11 @@ export default function Home() {
           <FaUser size={30} color="#fff" opacity={0.8} />
         </NavButton>
       </NavigationIcons>
-      <LogoutButton>
+      <LogoutButton
+        onClick={() => {
+          history.push('/');
+        }}
+      >
         <FaPowerOff size={30} color="#fff" opacity={0.8} />
       </LogoutButton>
     </Container>

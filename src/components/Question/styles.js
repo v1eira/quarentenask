@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
 
 export const Container = styled.li`
   background: #141419;
   width: 640px;
   border-radius: 12px;
   padding: 10px;
+  cursor: pointer;
 
   display: flex;
   flex-direction: column;
@@ -12,6 +14,10 @@ export const Container = styled.li`
 
   span {
     word-wrap: break-word;
+  }
+
+  &:hover {
+    background: ${lighten(0.02, '#141419')};
   }
 
   @media (max-width: 800px) {
@@ -85,7 +91,7 @@ export const Time = styled.span`
   margin-left: 10px;
 `;
 
-export const Question = styled.span`
+export const QuestionText = styled.span`
   font-size: 16px;
   color: #fff;
 
@@ -133,7 +139,7 @@ export const AnswerContent = styled.div`
   }
 `;
 
-export const Answer = styled.span`
+export const AnswerText = styled.span`
   font-size: 16px;
   color: #fff;
 

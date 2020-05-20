@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
 
 import {
@@ -9,8 +9,8 @@ import {
   QuestionContent,
   AnswerContent,
   Name,
-  Question,
-  Answer,
+  QuestionText,
+  AnswerText,
   UserInfo,
   User,
   Time,
@@ -19,13 +19,19 @@ import {
   Separator,
 } from './styles';
 
-export default function SinglePost() {
+export default function Question() {
+  const history = useHistory();
+
   return (
-    <Container>
+    <Container
+      onClick={() => {
+        history.push('/question');
+      }}
+    >
       <QuestionInfo>
         <Link to="/home">
           <img
-            src="https://pbs.twimg.com/profile_images/1257135002787160064/6awV-Oil_400x400.jpg"
+            src="https://pbs.twimg.com/profile_images/1262866049369702401/XPHCijRZ_400x400.jpg"
             alt="img"
           />
         </Link>
@@ -38,7 +44,7 @@ export default function SinglePost() {
               <Time>2 h</Time>
             </Link>
           </UserInfo>
-          <Question>O que você acha do Cobus?</Question>
+          <QuestionText>O que você acha do Cobus?</QuestionText>
         </QuestionContent>
       </QuestionInfo>
 
@@ -54,7 +60,7 @@ export default function SinglePost() {
               <Time>Agora</Time>
             </Link>
           </UserInfo>
-          <Answer>Po, maluco brabo d+. Toca muito!</Answer>
+          <AnswerText>Po, maluco brabo d+. Toca muito!</AnswerText>
           <Likes>
             <Link to="/home">
               <FaRegHeart color="#666" />

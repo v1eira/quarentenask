@@ -6,6 +6,7 @@ import SignUp from '../pages/SignUp';
 
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
+import SingleQuestion from '../pages/SingleQuestion';
 
 export default function Routes() {
   return (
@@ -15,6 +16,7 @@ export default function Routes() {
 
       <Route path="/home" component={Home} />
       <Route path="/profile" component={Profile} />
+      <Route path="/question" component={SingleQuestion} />
     </Switch>
   );
 }

@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const PostList = styled.ul`
+export const QuestionList = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;

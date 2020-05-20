@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FaEnvelope, FaKey } from 'react-icons/fa';
 
 import Q from '../../assets/quarentenask.svg';
@@ -14,6 +14,8 @@ import {
 } from './styles';
 
 export default function SignIn() {
+  const history = useHistory();
+
   return (
     <Wrapper>
       <Container>
@@ -27,7 +29,12 @@ export default function SignIn() {
             <FaKey size={20} />
             <input type="password" name="password" placeholder="******" />
           </InputField>
-          <SubmitButton type="submit">
+          <SubmitButton
+            type="submit"
+            onClick={() => {
+              history.push('/home');
+            }}
+          >
             <span>Entrar</span>
           </SubmitButton>
         </AuthForm>

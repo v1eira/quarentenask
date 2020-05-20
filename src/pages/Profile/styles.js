@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: visible;
+  overflow-y: auto;
   position: fixed;
   background: #000;
 `;
@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 export const Profile = styled.div`
   width: 680px;
   margin: 68px auto 0;
-  background: black;
+  background: transparent;
 
   border-right: 1px solid #333;
   border-left: 1px solid #333;

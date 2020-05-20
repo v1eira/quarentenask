@@ -1,23 +1,23 @@
 import React from 'react';
 
-import SinglePost from '../SinglePost';
+import Question from '../Question';
 
-import { Container, PostList } from './styles';
+import { Container, QuestionList } from './styles';
 
 export default function TimeLine() {
   return (
     <Container>
-      <PostList>
-        <SinglePost />
-        <SinglePost />
-        <SinglePost />
-        <SinglePost />
-        <SinglePost />
-        <SinglePost />
-        <SinglePost />
-        <SinglePost />
-        <SinglePost />
-      </PostList>
+      <QuestionList>
+        <Question />
+        <Question />
+        <Question />
+        <Question />
+        <Question />
+        <Question />
+        <Question />
+        <Question />
+        <Question />
+      </QuestionList>
     </Container>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FaEnvelope, FaKey, FaAt, FaUser } from 'react-icons/fa';
 
 import Q from '../../assets/quarentenask.svg';
@@ -14,6 +14,7 @@ import {
 } from './styles';
 
 export default function SignUp() {
+  const history = useHistory();
   return (
     <Wrapper>
       <Container>
@@ -43,7 +44,12 @@ export default function SignUp() {
               placeholder="Confirme sua senha"
             />
           </InputField>
-          <SubmitButton type="submit">
+          <SubmitButton
+            type="submit"
+            onClick={() => {
+              history.push('/home');
+            }}
+          >
             <span>Cadastrar</span>
           </SubmitButton>
         </AuthForm>
