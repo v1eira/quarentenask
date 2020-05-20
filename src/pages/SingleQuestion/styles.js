@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   position: fixed;
 
   background: #000;
@@ -167,6 +167,7 @@ export const Likes = styled.div`
   }
 
   svg {
+    transition: 0.2s color;
     &:hover {
       color: red !important;
     }

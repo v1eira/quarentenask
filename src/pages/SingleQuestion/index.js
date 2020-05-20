@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
 
 import Header from '../../components/Header';
+import PageBar from '../../components/PageBar';
 
 import {
   Wrapper,
@@ -33,6 +34,7 @@ function SingleQuestion() {
       <Header />
 
       <Content>
+        <PageBar name="Pergunta" />
         <Container>
           <Section>
             <Info>

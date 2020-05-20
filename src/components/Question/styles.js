@@ -12,6 +12,8 @@ export const Container = styled.li`
   flex-direction: column;
   justify-content: space-between;
 
+  transition: 0.2s background;
+
   span {
     word-wrap: break-word;
   }
@@ -162,6 +164,7 @@ export const Likes = styled.div`
   }
 
   svg {
+    transition: 0.2s color;
     &:hover {
       color: red !important;
     }

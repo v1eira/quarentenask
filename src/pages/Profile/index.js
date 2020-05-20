@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fa';
 
 import Header from '../../components/Header';
+import PageBar from '../../components/PageBar';
 import TimeLine from '../../components/TimeLine';
 
 import {
@@ -37,6 +38,7 @@ export default function Home() {
       <Header />
 
       <Profile>
+        <PageBar name="Perfil" />
         <Images>
           <img
             src="https://pbs.twimg.com/profile_banners/1103890260205887488/1552027687/1500x500"
