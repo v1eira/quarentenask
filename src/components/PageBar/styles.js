@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
-  width: 679px;
+  width: 680px;
   padding: 5px 0;
   position: fixed;
   z-index: 1;
@@ -9,16 +9,11 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
 
-  border: 1px solid #333;
+  border-bottom: 1px solid #333;
   background: #000;
 
   button {
     margin: 0 20px;
-  }
-
-  @media (max-width: 700px) {
-    border: none;
-    border-bottom: 1px solid #333;
   }
 `;
 
