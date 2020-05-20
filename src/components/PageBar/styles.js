@@ -15,6 +15,11 @@ export const Content = styled.div`
   button {
     margin: 0 20px;
   }
+
+  @media (max-width: 700px) {
+    border: none;
+    border-bottom: 1px solid #333;
+  }
 `;
 
 export const GoBackButton = styled.button`
