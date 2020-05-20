@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import {
   FaHome,
   FaSearch,
-  FaHandHoldingHeart,
+  FaChartLine,
   FaUser,
   FaPowerOff,
 } from 'react-icons/fa';
@@ -31,7 +31,7 @@ export default function Home() {
         </NavButton>
 
         <NavButton>
-          <FaHandHoldingHeart size={30} color="#fff" opacity={0.8} />
+          <FaChartLine size={30} color="#fff" opacity={0.8} />
         </NavButton>
 
         <NavButton
