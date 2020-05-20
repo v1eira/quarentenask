@@ -1,3 +1,6 @@
+## Preview
+Click [here](https://quarentenask.now.sh/) to preview the app (using Vercel NOW).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
