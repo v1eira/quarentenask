@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
@@ -22,14 +23,16 @@ import {
 export default function Question() {
   const history = useHistory();
 
+  function handleClick(e, path) {
+    e.preventDefault();
+    history.push(path);
+    e.stopPropagation();
+  }
+
   return (
-    <Container
-      onClick={() => {
-        history.push('/question');
-      }}
-    >
+    <Container onClick={(e) => handleClick(e, '/question')}>
       <QuestionInfo>
-        <Link to="/home">
+        <Link onClick={(e) => handleClick(e, '/home')}>
           <img
             src="https://pbs.twimg.com/profile_images/1262866049369702401/XPHCijRZ_400x400.jpg"
             alt="img"
@@ -37,7 +40,7 @@ export default function Question() {
         </Link>
         <QuestionContent>
           <UserInfo>
-            <Link to="/home">
+            <Link onClick={(e) => handleClick(e, '/home')}>
               <Name>Bellatrix</Name>
               <User>@anab_leao</User>
               <span>-</span>
@@ -53,7 +56,7 @@ export default function Question() {
       <AnswerInfo>
         <AnswerContent>
           <UserInfo>
-            <Link to="/profile">
+            <Link onClick={(e) => handleClick(e, '/profile')}>
               <Name>V.</Name>
               <User>@v1eira</User>
               <span>-</span>
@@ -62,15 +65,15 @@ export default function Question() {
           </UserInfo>
           <AnswerText>Po, maluco brabo d+. Toca muito!</AnswerText>
           <Likes>
-            <Link to="/home">
+            <Link onClick={(e) => handleClick(e, '/home')}>
               <FaRegHeart color="#666" />
             </Link>
-            <Link to="/home">
+            <Link onClick={(e) => handleClick(e, '/home')}>
               <Count>14</Count>
             </Link>
           </Likes>
         </AnswerContent>
-        <Link to="/profile">
+        <Link onClick={(e) => handleClick(e, '/profile')}>
           <img
             src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
             alt="img"
