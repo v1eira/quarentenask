@@ -9,14 +9,14 @@ import { Content, GoBackButton, PageName, BarWrapper } from './styles';
 function PageBar({ name }) {
   const history = useHistory();
 
+  function handleGoBack() {
+    return history.length > 2 ? history.goBack() : history.push('/home');
+  }
+
   return (
     <>
       <Content>
-        <GoBackButton
-          onClick={() => {
-            history.goBack();
-          }}
-        >
+        <GoBackButton onClick={handleGoBack}>
           <FaArrowLeft size={18} color="#fff" opacity={0.8} />
         </GoBackButton>
         <PageName>{name}</PageName>

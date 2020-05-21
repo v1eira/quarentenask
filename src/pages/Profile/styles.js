@@ -320,6 +320,11 @@ export const TimelineSelector = styled.div`
   margin: 20px 0;
   background: #000;
 
+  .focused {
+    color: #fff;
+    border-color: #fff;
+  }
+
   a {
     width: 100%;
     padding: 15px 0;

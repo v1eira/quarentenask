@@ -33,6 +33,20 @@ import {
 } from './styles';
 
 export default function Home() {
+  function pushFocusedClass(id) {
+    const ids = ['respostas', 'perguntas', 'curtidas'];
+
+    const e = document.getElementById(id);
+    e.classList.add('focused');
+
+    for (let i = 0; i < ids.length; i += 1) {
+      if (ids[i] !== id) {
+        const el = document.getElementById(ids[i]);
+        if (el.classList.length > 0) el.classList.remove('focused');
+      }
+    }
+  }
+
   return (
     <Wrapper>
       <Header />
@@ -123,13 +137,26 @@ export default function Home() {
           </ProfileInfo>
 
           <TimelineSelector>
-            <Link to="/profile">
+            <Link
+              to="/profile"
+              className="focused"
+              onClick={() => pushFocusedClass('respostas')}
+              id="respostas"
+            >
               <span>Respostas</span>
             </Link>
-            <Link to="/profile">
+            <Link
+              to="/profile"
+              onClick={() => pushFocusedClass('perguntas')}
+              id="perguntas"
+            >
               <span>Perguntas</span>
             </Link>
-            <Link to="/profile">
+            <Link
+              to="/profile"
+              onClick={() => pushFocusedClass('curtidas')}
+              id="curtidas"
+            >
               <span>Curtidas</span>
             </Link>
           </TimelineSelector>

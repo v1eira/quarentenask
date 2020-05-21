@@ -30,7 +30,11 @@ export default function Home() {
           <FaSearch size={30} color="#fff" opacity={0.8} />
         </NavButton>
 
-        <NavButton>
+        <NavButton
+          onClick={() => {
+            history.push('/trending');
+          }}
+        >
           <FaChartLine size={30} color="#fff" opacity={0.8} />
         </NavButton>
 

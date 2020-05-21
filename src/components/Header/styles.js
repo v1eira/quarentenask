@@ -3,7 +3,7 @@ import { lighten } from 'polished';
 
 export const Container = styled.div`
   background: #000;
-  width: calc(100vw - 40px);
+  width: calc(100vw - 55px);
   height: 27px;
   border-radius: 2px;
   display: flex;
