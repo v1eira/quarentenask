@@ -7,14 +7,18 @@ export const Wrapper = styled.div`
   overflow-y: auto;
   position: fixed;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: #141419;
 `;
 
 export const Container = styled.div`
-  margin: auto;
-  margin-top: 17.5vh;
   width: 480px;
-  height: 65vh;
+  padding: 10px;
+  height: 630px;
+  position: absolute;
 
   background: #fff;
   border-radius: 12px;
@@ -32,26 +36,23 @@ export const Container = styled.div`
 
   a {
     text-decoration: none;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
 
   @media (max-width: 600px) {
     width: 80vw;
+
+    img {
+      width: 26.5vw;
+      height: 26.5vw;
+      margin-bottom: 20px;
+    }
   }
 
-  @media (max-height: 800px) {
-    height: 80vh;
-    margin-top: 10vh;
-  }
-
-  @media (max-height: 600px) {
-    height: 90vh;
-    margin-top: 5vh;
-  }
-
-  @media (max-width: 350px) and (max-height: 600px) {
-    padding: 10px;
-    margin-top: calc(5vh - 10px);
+  @media (max-height: 690px) {
+    top: 3%;
+    margin-bottom: 5%;
   }
 `;
 

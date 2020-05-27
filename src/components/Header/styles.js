@@ -2,17 +2,17 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 
 export const Container = styled.div`
-  background: #000;
-  width: calc(100vw - 55px);
+  position: fixed;
+  width: calc(100% - 40px);
   height: 27px;
-  border-radius: 2px;
+  padding: 20px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  padding: 20px;
   z-index: 99;
 
+  background: #000;
   border-bottom: 1px solid #333;
 
   a {
@@ -30,7 +30,7 @@ export const Container = styled.div`
   }
 `;
 
-export const NavigationIcons = styled.div`
+export const NavigationButtons = styled.div`
   display: flex;
   align-items: center;
   margin-right: 100px;

@@ -9,7 +9,12 @@ import {
   FaPowerOff,
 } from 'react-icons/fa';
 
-import { Container, NavigationIcons, NavButton, LogoutButton } from './styles';
+import {
+  Container,
+  NavigationButtons,
+  NavButton,
+  LogoutButton,
+} from './styles';
 
 export default function Home() {
   const history = useHistory();
@@ -17,7 +22,7 @@ export default function Home() {
   return (
     <Container>
       <Link to="/home">QuarentenAsk</Link>
-      <NavigationIcons>
+      <NavigationButtons>
         <NavButton
           onClick={() => {
             history.push('/home');
@@ -45,7 +50,7 @@ export default function Home() {
         >
           <FaUser size={30} color="#fff" opacity={0.8} />
         </NavButton>
-      </NavigationIcons>
+      </NavigationButtons>
       <LogoutButton
         onClick={() => {
           history.push('/');
