@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: fixed;
+  position: absolute;
+  z-index: 1;
 
   background: #000;
 `;
@@ -15,7 +16,7 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 68px 0 0;
+  margin: 68px 0 20px;
 `;
 
 export const TopBar = styled.div`

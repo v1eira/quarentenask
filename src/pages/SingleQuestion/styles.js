@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: fixed;
+  position: absolute;
+  z-index: 1;
 
   background: #000;
 `;
@@ -31,9 +32,7 @@ export const Content = styled.div`
 export const Container = styled.li`
   background: #141419;
   width: calc(100% - 20px);
-  padding: 10px;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  padding: 15px 10px;
 
   display: flex;
   flex-direction: column;
@@ -63,7 +62,9 @@ export const Info = styled.div`
   }
 
   img {
+    min-width: 75px;
     width: 75px;
+    min-height: 75px;
     height: 75px;
     border-radius: 50%;
     padding: 5px;

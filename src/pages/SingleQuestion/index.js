@@ -43,7 +43,7 @@ export default function SingleQuestion() {
             <Info>
               <Link to="/home">
                 <img
-                  src="https://pbs.twimg.com/profile_images/1262866049369702401/XPHCijRZ_400x400.jpg"
+                  src="https://api.adorable.io/avatars/285/abott@adorablb.png"
                   alt="img"
                 />
               </Link>

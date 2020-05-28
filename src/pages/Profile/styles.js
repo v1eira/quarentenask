@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: fixed;
+  position: absolute;
+  z-index: 1;
   background: #000;
 `;
 

@@ -45,7 +45,6 @@ export const Container = styled.div`
     img {
       width: 26.5vw;
       height: 26.5vw;
-      margin-bottom: 20px;
     }
   }
 `;
