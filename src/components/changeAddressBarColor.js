@@ -1,4 +1,4 @@
-function changeAddressBarColor({ color }) {
+function changeAddressBarColor(color) {
   document
     .querySelector('meta[name=theme-color]')
     .setAttribute('content', color);
