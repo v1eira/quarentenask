@@ -273,7 +273,7 @@ export const Question = styled.div`
     transition: 0.3s background;
 
     &:focus {
-      background: ${lighten(0.02, '#0d0d0d')};
+      background: ${lighten(0.05, '#0d0d0d')};
 
       & + button {
         display: block;
