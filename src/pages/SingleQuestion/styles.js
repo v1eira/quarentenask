@@ -145,7 +145,7 @@ export const Separator = styled.div`
 
 export const AnswerContent = styled(QuestionContent)`
   align-items: flex-end;
-  margin: 0 15px;
+  margin: 0 15px 0 10px;
 `;
 
 export const AnswerText = styled.span`
