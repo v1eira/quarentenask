@@ -1,5 +1,8 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
+
+import changeAddressBarColor from '../../components/changeAddressBarColor';
 
 import Header from '../../components/Header';
 import PageBar from '../../components/PageBar';
@@ -7,7 +10,9 @@ import Timeline from '../../components/TimeLine';
 
 import { Wrapper, Content, FilterSelector } from './styles';
 
-function Trending() {
+export default function Trending() {
+  changeAddressBarColor('#000');
+
   function pushFocusedClass(id) {
     const ids = ['todos', 'seguindo'];
 
@@ -51,5 +56,3 @@ function Trending() {
     </Wrapper>
   );
 }
-
-export default Trending;

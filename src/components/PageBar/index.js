@@ -6,7 +6,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 
 import { Content, GoBackButton, PageName, BarWrapper } from './styles';
 
-function PageBar({ name }) {
+export default function PageBar({ name }) {
   const history = useHistory();
 
   function handleGoBack() {
@@ -29,5 +29,3 @@ function PageBar({ name }) {
 PageBar.propTypes = {
   name: PropTypes.string.isRequired,
 };
-
-export default PageBar;

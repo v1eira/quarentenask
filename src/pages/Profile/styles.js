@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   background: #000;
 `;
 
-export const Profile = styled.div`
+export const UserProfile = styled.div`
   width: 680px;
   margin: 68px auto 0;
   background: transparent;

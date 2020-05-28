@@ -9,13 +9,15 @@ import {
   FaHeart,
 } from 'react-icons/fa';
 
+import changeAddressBarColor from '../../components/changeAddressBarColor';
+
 import Header from '../../components/Header';
 import PageBar from '../../components/PageBar';
 import TimeLine from '../../components/TimeLine';
 
 import {
   Wrapper,
-  Profile,
+  UserProfile,
   Content,
   ProfileInfo,
   Images,
@@ -32,7 +34,9 @@ import {
   TimelineSelector,
 } from './styles';
 
-export default function Home() {
+export default function Profile() {
+  changeAddressBarColor('#000');
+
   function pushFocusedClass(id) {
     const ids = ['respostas', 'perguntas', 'curtidas'];
 
@@ -51,7 +55,7 @@ export default function Home() {
     <Wrapper>
       <Header />
 
-      <Profile>
+      <UserProfile>
         <PageBar name="Perfil" />
         <Images>
           <img
@@ -163,7 +167,7 @@ export default function Home() {
 
           <TimeLine />
         </Content>
-      </Profile>
+      </UserProfile>
     </Wrapper>
   );
 }

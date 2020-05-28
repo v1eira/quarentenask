@@ -16,7 +16,7 @@ import {
   LogoutButton,
 } from './styles';
 
-export default function Home() {
+export default function Header() {
   const history = useHistory();
 
   return (

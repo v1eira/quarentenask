@@ -3,6 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
 
+import changeAddressBarColor from '../../components/changeAddressBarColor';
+
 import Header from '../../components/Header';
 import PageBar from '../../components/PageBar';
 
@@ -28,7 +30,8 @@ import {
   AnswerFooter,
 } from './styles';
 
-function SingleQuestion() {
+export default function SingleQuestion() {
+  changeAddressBarColor('#000');
   return (
     <Wrapper>
       <Header />
@@ -95,5 +98,3 @@ function SingleQuestion() {
     </Wrapper>
   );
 }
-
-export default SingleQuestion;
