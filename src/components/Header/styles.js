@@ -47,6 +47,7 @@ export const NavButton = styled.button`
   border-radius: 30px;
   background: transparent;
   cursor: pointer;
+  outline: none;
 
   transition: 0.2s background;
 

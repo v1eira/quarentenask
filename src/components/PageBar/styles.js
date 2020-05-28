@@ -21,6 +21,7 @@ export const GoBackButton = styled.button`
   border: none;
   background: transparent;
   cursor: pointer;
+  outline: none;
 
   width: 40px;
   height: 40px;

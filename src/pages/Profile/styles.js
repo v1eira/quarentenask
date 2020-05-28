@@ -9,6 +9,14 @@ export const Wrapper = styled.div`
   position: absolute;
   z-index: 1;
   background: #000;
+
+  button {
+    outline: none;
+  }
+
+  textarea {
+    outline: none;
+  }
 `;
 
 export const UserProfile = styled.div`
@@ -262,8 +270,11 @@ export const Question = styled.div`
     color: #fff;
     font-size: 18px;
     resize: none;
+    transition: 0.3s background;
 
     &:focus {
+      background: ${lighten(0.02, '#0d0d0d')};
+
       & + button {
         display: block;
       }
