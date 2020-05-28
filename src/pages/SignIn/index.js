@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FaEnvelope, FaKey } from 'react-icons/fa';
 
+import changeAddressBarColor from '../../components/changeAddressBarColor';
+
 import Q from '../../assets/quarentenask.svg';
 
 import {
@@ -14,6 +16,8 @@ import {
 } from './styles';
 
 export default function SignIn() {
+  changeAddressBarColor('#141419');
+
   const history = useHistory();
 
   return (
