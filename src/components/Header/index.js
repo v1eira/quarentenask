@@ -19,13 +19,19 @@ import {
 export default function Header() {
   const history = useHistory();
 
+  function navigateTo(path) {
+    if (window.location.pathname !== path) {
+      history.push(path);
+    }
+  }
+
   return (
     <Container>
       <Link to="/home">QuarentenAsk</Link>
       <NavigationButtons>
         <NavButton
           onClick={() => {
-            history.push('/home');
+            navigateTo('/home');
           }}
         >
           <FaHome size={30} color="#fff" opacity={0.8} />
@@ -37,7 +43,7 @@ export default function Header() {
 
         <NavButton
           onClick={() => {
-            history.push('/trending');
+            navigateTo('/trending');
           }}
         >
           <FaChartLine size={30} color="#fff" opacity={0.8} />
@@ -45,7 +51,7 @@ export default function Header() {
 
         <NavButton
           onClick={() => {
-            history.push('/profile');
+            navigateTo('/profile');
           }}
         >
           <FaUser size={30} color="#fff" opacity={0.8} />
@@ -53,7 +59,7 @@ export default function Header() {
       </NavigationButtons>
       <LogoutButton
         onClick={() => {
-          history.push('/');
+          navigateTo('/');
         }}
       >
         <FaPowerOff size={30} color="#fff" opacity={0.8} />
