@@ -3,6 +3,8 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
 
+import ModalBox from '../ModalBox';
+
 import {
   Container,
   QuestionInfo,
@@ -21,6 +23,12 @@ import {
 } from './styles';
 
 export default function Question() {
+  function openModal(e) {
+    e.preventDefault();
+    document.getElementById('likesModal').style.display = 'block';
+    e.stopPropagation();
+  }
+
   const history = useHistory();
 
   function handleClick(e, path) {
@@ -68,9 +76,10 @@ export default function Question() {
             <Link onClick={(e) => handleClick(e, '/home')}>
               <FaRegHeart color="#666" />
             </Link>
-            <Link onClick={(e) => handleClick(e, '/home')}>
+            <Link id="likesList" onClick={(e) => openModal(e)}>
               <Count>14</Count>
             </Link>
+            <ModalBox />
           </Likes>
         </AnswerContent>
         <Link onClick={(e) => handleClick(e, '/profile')}>

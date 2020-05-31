@@ -10,7 +10,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 99;
+  z-index: 1;
 
   background: #000;
   border-bottom: 1px solid #333;
