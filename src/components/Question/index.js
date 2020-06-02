@@ -73,7 +73,7 @@ export default function Question() {
           </UserInfo>
           <AnswerText>Po, maluco brabo d+. Toca muito!</AnswerText>
           <Likes>
-            <Link onClick={(e) => handleClick(e, '/home')}>
+            <Link className="heart" onClick={(e) => handleClick(e, '/home')}>
               <FaRegHeart color="#666" />
             </Link>
             <Link id="likesList" onClick={(e) => openModal(e)}>

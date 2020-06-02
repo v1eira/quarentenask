@@ -75,7 +75,7 @@ export const LogoutButton = styled(NavButton)`
     background: transparent;
     svg {
       opacity: 1;
-      color: #990000 !important;
+      color: red !important;
     }
   }
 `;

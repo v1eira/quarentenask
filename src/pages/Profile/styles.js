@@ -113,9 +113,12 @@ export const EditButton = styled.button`
   background: inherit;
   padding: 10px 15px;
 
+  transition: 0.2s;
+
   span {
     font-size: 15px;
     color: #999;
+    transition: 0.2s;
   }
 
   &:hover {
@@ -232,6 +235,8 @@ export const FollowButton = styled.button`
     color: #999;
     display: none;
   }
+
+  transition: 0.2s;
 
   &:hover {
     border-color: #fff;
