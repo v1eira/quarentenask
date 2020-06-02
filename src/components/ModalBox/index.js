@@ -13,7 +13,6 @@ import {
 } from './styles';
 
 function ModalBox() {
-  // When the user clicks on <span> (x), close the modal
   function closeModal(e) {
     const eventId = e.target.getAttribute('id');
     const parentNodeId = e.target.parentNode.getAttribute('id');
@@ -21,14 +20,27 @@ function ModalBox() {
     if (
       eventId === 'likesModal' ||
       eventId === 'closeModal' ||
-      parentNodeId === 'closeModal'
+      parentNodeId === 'closeModal' ||
+      e.key === 'Escape'
     )
       document.getElementById('likesModal').style.display = 'none';
     e.stopPropagation();
   }
 
+  function onEscDown(e) {
+    e.preventDefault();
+    if (e.key === 'Escape') closeModal(e);
+    e.stopPropagation();
+  }
+
+  document.addEventListener('keydown', onEscDown);
+
   return (
-    <Modal id="likesModal" onClick={(e) => closeModal(e)}>
+    <Modal
+      id="likesModal"
+      onKeyDown={(e) => onEscDown(e)}
+      onClick={(e) => closeModal(e)}
+    >
       <ModalContent id="likesContent">
         <ModalHeader>
           <ModalName>Curtidas</ModalName>
