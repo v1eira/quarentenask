@@ -2,25 +2,34 @@ import styled from 'styled-components';
 
 export const Modal = styled.div`
   cursor: default;
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 2;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 110%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(255, 255, 255, 0.2); /* Black w/ opacity */
+  width: 100%;
+  height: 110%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.3);
 `;
 
 export const ModalContent = styled.div`
   background-color: #000;
-  margin: 10% auto; /* 15% from the top and centered */
+  margin: 20vh auto;
   border-radius: 12px;
-  width: 500px; /* Could be more or less, depending on screen size */
-  min-height: 400px;
-  max-height: 600px;
-  position: relative;
+  max-width: 500px;
+  min-height: 300px;
+  max-height: 60vh;
+
+  @media (max-width: 700px) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  @media (max-width: 320px) {
+    width: 280px;
+    margin: 20vh auto;
+  }
 `;
 
 export const ModalHeader = styled.div`
@@ -51,7 +60,7 @@ export const ModalName = styled.span`
 
 export const UserList = styled.div`
   overflow-y: scroll;
-  height: 100%;
+  max-height: calc(60vh - 57px);
 `;
 
 export const ListContent = styled.ul`

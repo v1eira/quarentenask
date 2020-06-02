@@ -8,6 +8,7 @@ export const Container = styled.li`
 
   border-bottom: 1px solid #333;
   padding: 10px 20px;
+  margin: 0 !important;
 
   transition: 0.2s background-color;
 
