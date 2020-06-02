@@ -37,7 +37,7 @@ export default function SingleQuestion() {
 
   function openModal(e) {
     e.preventDefault();
-    document.getElementById('likesModal').style.display = 'block';
+    document.getElementById('user-list-modal').style.display = 'block';
     e.stopPropagation();
   }
 
