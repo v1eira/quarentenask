@@ -59,7 +59,7 @@ export const ModalName = styled.span`
 `;
 
 export const UserList = styled.div`
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: calc(60vh - 57px);
 `;
 

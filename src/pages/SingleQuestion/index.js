@@ -8,7 +8,7 @@ import changeAddressBarColor from '../../components/changeAddressBarColor';
 
 import Header from '../../components/Header';
 import PageBar from '../../components/PageBar';
-import ModalBox from '../../components/ModalBox';
+import UserListModal from '../../components/UserListModal';
 
 import {
   Wrapper,
@@ -93,13 +93,13 @@ export default function SingleQuestion() {
               <AnswerTime>17:28 PM · 01 de abr de 2020</AnswerTime>
               <span>-</span>
               <Likes>
-                <Link to="/question">
+                <Link className="heart" to="/question">
                   <FaRegHeart color="#666" />
                 </Link>
                 <Link id="likesList" onClick={(e) => openModal(e)}>
                   <Count>14 Curtidas</Count>
                 </Link>
-                <ModalBox />
+                <UserListModal />
               </Likes>
             </AnswerFooter>
           </Section>

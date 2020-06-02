@@ -14,6 +14,7 @@ import changeAddressBarColor from '../../components/changeAddressBarColor';
 import Header from '../../components/Header';
 import PageBar from '../../components/PageBar';
 import TimeLine from '../../components/TimeLine';
+import EditProfileModal from '../../components/EditProfileModal';
 
 import {
   Wrapper,
@@ -36,6 +37,12 @@ import {
 
 export default function Profile() {
   changeAddressBarColor('#000');
+
+  function openModal(e) {
+    e.preventDefault();
+    document.getElementById('edit-profile-modal').style.display = 'block';
+    e.stopPropagation();
+  }
 
   function pushFocusedClass(id) {
     const ids = ['respostas', 'perguntas', 'curtidas'];
@@ -73,9 +80,10 @@ export default function Profile() {
               <span>Ewerson Vieira</span>
               <span>-</span>
               <span>@v1eira</span>
-              <EditButton>
+              <EditButton onClick={(e) => openModal(e)}>
                 <span>Editar perfil</span>
               </EditButton>
+              <EditProfileModal />
             </NameAndUser>
             <SocialMedia>
               <FaInstagram size={20} />

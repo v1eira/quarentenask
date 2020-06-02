@@ -167,10 +167,12 @@ export const Likes = styled.div`
     height: 16px;
   }
 
-  svg {
-    transition: 0.2s color;
-    &:hover {
-      color: red !important;
+  .heart {
+    svg {
+      transition: 0.2s color;
+      &:hover {
+        color: red !important;
+      }
     }
   }
 

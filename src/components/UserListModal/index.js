@@ -12,36 +12,30 @@ import {
   ListContent,
 } from './styles';
 
-function ModalBox() {
+function UserListModal() {
   function closeModal(e) {
     const eventId = e.target.getAttribute('id');
     const parentNodeId = e.target.parentNode.getAttribute('id');
     e.preventDefault();
     if (
-      eventId === 'likesModal' ||
+      eventId === 'user-list-modal' ||
       eventId === 'closeModal' ||
       parentNodeId === 'closeModal' ||
       e.key === 'Escape'
     )
-      document.getElementById('likesModal').style.display = 'none';
+      document.getElementById('user-list-modal').style.display = 'none';
     e.stopPropagation();
   }
 
   function onEscDown(e) {
-    e.preventDefault();
     if (e.key === 'Escape') closeModal(e);
-    e.stopPropagation();
   }
 
   document.addEventListener('keydown', onEscDown);
 
   return (
-    <Modal
-      id="likesModal"
-      onKeyDown={(e) => onEscDown(e)}
-      onClick={(e) => closeModal(e)}
-    >
-      <ModalContent id="likesContent">
+    <Modal id="user-list-modal" onClick={(e) => closeModal(e)}>
+      <ModalContent>
         <ModalHeader>
           <ModalName>Curtidas</ModalName>
           <FaTimes id="closeModal" color="#999" />
@@ -65,4 +59,4 @@ function ModalBox() {
   );
 }
 
-export default ModalBox;
+export default UserListModal;
