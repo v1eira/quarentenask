@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -7,6 +8,7 @@ import changeAddressBarColor from '../../components/changeAddressBarColor';
 
 import Header from '../../components/Header';
 import PageBar from '../../components/PageBar';
+import ModalBox from '../../components/ModalBox';
 
 import {
   Wrapper,
@@ -32,6 +34,13 @@ import {
 
 export default function SingleQuestion() {
   changeAddressBarColor('#000');
+
+  function openModal(e) {
+    e.preventDefault();
+    document.getElementById('likesModal').style.display = 'block';
+    e.stopPropagation();
+  }
+
   return (
     <Wrapper>
       <Header />
@@ -87,9 +96,10 @@ export default function SingleQuestion() {
                 <Link to="/question">
                   <FaRegHeart color="#666" />
                 </Link>
-                <Link to="/question">
+                <Link id="likesList" onClick={(e) => openModal(e)}>
                   <Count>14 Curtidas</Count>
                 </Link>
+                <ModalBox />
               </Likes>
             </AnswerFooter>
           </Section>

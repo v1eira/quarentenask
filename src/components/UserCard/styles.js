@@ -13,6 +13,12 @@ export const Container = styled.li`
 
   transition: 0.2s background-color;
 
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
   &:hover {
     background-color: ${lighten(0.08, '#000')};
   }
