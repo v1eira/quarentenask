@@ -69,4 +69,9 @@ export const ListContent = styled.ul`
   padding: 0;
 
   width: 100%;
+
+  li:last-child {
+    border: none;
+    border-bottom-left-radius: 12px;
+  }
 `;

@@ -6,6 +6,7 @@ export const Container = styled.li`
   align-items: center;
   cursor: pointer;
 
+  background-color: transparent;
   border-bottom: 1px solid #333;
   padding: 10px 20px;
   margin: 0 !important;
@@ -13,7 +14,7 @@ export const Container = styled.li`
   transition: 0.2s background-color;
 
   &:hover {
-    background-color: ${lighten(0.05, '#000')};
+    background-color: ${lighten(0.08, '#000')};
   }
 `;
 
