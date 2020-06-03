@@ -62,7 +62,6 @@ export const NavButton = styled.button`
   }
 
   .focused {
-    background: ${lighten(0.05, '#000')};
     opacity: 1;
   }
 
