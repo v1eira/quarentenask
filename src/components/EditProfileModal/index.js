@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import { FaInstagram, FaTimes, FaTwitter } from 'react-icons/fa';
+import { FaAt, FaInstagram, FaTimes, FaTwitter } from 'react-icons/fa';
 
 import {
   Modal,
@@ -58,8 +58,10 @@ function EditProfileModal() {
             <input type="text" />
           </InputField>
           <InputField>
-            <span className="input-label">@</span>
-            <input type="text" />
+            <span className="input-label">
+              <FaAt />
+            </span>
+            <input type="text" autoCapitalize="off" />
           </InputField>
           <InputField>
             <span className="input-label">
@@ -67,7 +69,7 @@ function EditProfileModal() {
             </span>
             <span className="text-container">
               <label>instagram.com/</label>
-              <input type="text" />
+              <input type="text" autoCapitalize="off" />
             </span>
           </InputField>
           <InputField>
@@ -76,7 +78,7 @@ function EditProfileModal() {
             </span>
             <span className="text-container">
               <label>twitter.com/</label>
-              <input type="text" />
+              <input type="text" autoCapitalize="off" />
             </span>
           </InputField>
           <InputField>
