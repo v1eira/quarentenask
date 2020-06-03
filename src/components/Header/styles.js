@@ -20,7 +20,7 @@ export const Container = styled.div`
     font-size: 24px;
     font-weight: bold;
     color: #fff;
-    opacity: 0.8;
+    opacity: 0.5;
 
     transition: 0.2s opacity;
 
@@ -54,8 +54,16 @@ export const NavButton = styled.button`
   svg {
     margin: 0;
     padding: 0;
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.5;
 
     transition: 0.2s opacity;
+  }
+
+  .focused {
+    background: ${lighten(0.05, '#000')};
+    opacity: 1;
   }
 
   &:hover {
@@ -75,7 +83,6 @@ export const LogoutButton = styled(NavButton)`
     background: transparent;
     svg {
       opacity: 1;
-      color: red !important;
     }
   }
 `;

@@ -124,15 +124,42 @@ export const InputField = styled.div`
   .input-label {
     font-size: 16px;
     color: #999;
+    margin-bottom: 5px;
+
+    svg {
+      color: #999;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .text-container {
+    margin: 0;
+
+    display: flex;
+    align-items: baseline;
+
+    label {
+      color: #999;
+      font-size: 14px;
+      padding-right: 1px;
+      -webkit-touch-callout: none;
+      /*Make the label text unselectable*/
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
   }
 
   input {
     width: 100%;
-    height: 30px;
     border: 0;
     background: transparent;
     color: #fff;
     outline: none;
+    font-size: 14px;
   }
 `;
 

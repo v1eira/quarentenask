@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 import {
@@ -25,6 +25,26 @@ export default function Header() {
     }
   }
 
+  function highlightPageButton() {
+    switch (window.location.pathname) {
+      case '/home':
+        document.getElementById('home-button').classList.add('focused');
+        break;
+      case '/trending':
+        document.getElementById('trending-button').classList.add('focused');
+        break;
+      case '/profile':
+        document.getElementById('profile-button').classList.add('focused');
+        break;
+      default:
+        break;
+    }
+  }
+
+  useEffect(() => {
+    highlightPageButton();
+  });
+
   return (
     <Container>
       <Link to="/home">QuarentenAsk</Link>
@@ -34,11 +54,11 @@ export default function Header() {
             navigateTo('/home');
           }}
         >
-          <FaHome size={30} color="#fff" opacity={0.8} />
+          <FaHome id="home-button" />
         </NavButton>
 
-        <NavButton>
-          <FaSearch size={30} color="#fff" opacity={0.8} />
+        <NavButton id="search-button">
+          <FaSearch />
         </NavButton>
 
         <NavButton
@@ -46,7 +66,7 @@ export default function Header() {
             navigateTo('/trending');
           }}
         >
-          <FaChartLine size={30} color="#fff" opacity={0.8} />
+          <FaChartLine id="trending-button" />
         </NavButton>
 
         <NavButton
@@ -54,7 +74,7 @@ export default function Header() {
             navigateTo('/profile');
           }}
         >
-          <FaUser size={30} color="#fff" opacity={0.8} />
+          <FaUser id="profile-button" />
         </NavButton>
       </NavigationButtons>
       <LogoutButton
@@ -62,7 +82,7 @@ export default function Header() {
           navigateTo('/');
         }}
       >
-        <FaPowerOff size={30} color="#fff" opacity={0.8} />
+        <FaPowerOff />
       </LogoutButton>
     </Container>
   );
