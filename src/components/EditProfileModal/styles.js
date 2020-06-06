@@ -61,7 +61,6 @@ export const ModalName = styled.span`
 export const UserInfo = styled.div`
   overflow-y: auto;
   max-height: calc(80vh - 57px);
-  padding-bottom: 10px;
 `;
 
 export const Images = styled.div`
