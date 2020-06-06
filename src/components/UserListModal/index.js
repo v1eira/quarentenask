@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FaTimes } from 'react-icons/fa';
 
 import UserCard from '../UserCard';
@@ -12,18 +13,18 @@ import {
   ListContent,
 } from './styles';
 
-function UserListModal() {
+function UserListModal({ name, id }) {
   function closeModal(e) {
     const eventId = e.target.getAttribute('id');
     const parentNodeId = e.target.parentNode.getAttribute('id');
     e.preventDefault();
     if (
-      eventId === 'user-list-modal' ||
+      eventId === id ||
       eventId === 'closeModal' ||
       parentNodeId === 'closeModal' ||
       e.key === 'Escape'
     )
-      document.getElementById('user-list-modal').style.display = 'none';
+      document.getElementById(id).style.display = 'none';
     e.stopPropagation();
   }
 
@@ -34,10 +35,10 @@ function UserListModal() {
   document.addEventListener('keydown', onEscDown);
 
   return (
-    <Modal id="user-list-modal" onClick={(e) => closeModal(e)}>
+    <Modal id={id} onClick={(e) => closeModal(e)}>
       <ModalContent>
         <ModalHeader>
-          <ModalName>Curtidas</ModalName>
+          <ModalName>{name}</ModalName>
           <FaTimes id="closeModal" color="#999" />
         </ModalHeader>
         <UserList>
@@ -58,5 +59,10 @@ function UserListModal() {
     </Modal>
   );
 }
+
+UserListModal.propTypes = {
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
 
 export default UserListModal;

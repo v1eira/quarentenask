@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -15,6 +16,7 @@ import Header from '../../components/Header';
 import PageBar from '../../components/PageBar';
 import TimeLine from '../../components/TimeLine';
 import EditProfileModal from '../../components/EditProfileModal';
+import UserListModal from '../../components/UserListModal';
 
 import {
   Wrapper,
@@ -33,15 +35,27 @@ import {
   Question,
   QuestionButton,
   TimelineSelector,
+  Selector,
 } from './styles';
 
 export default function Profile() {
   changeAddressBarColor('#000');
 
-  function openModal(e) {
+  function openModal(e, id) {
     e.preventDefault();
-    document.getElementById('edit-profile-modal').style.display = 'block';
     e.stopPropagation();
+    switch (id) {
+      case 'following':
+        document.getElementById(id).style.display = 'block';
+        break;
+      case 'followers':
+        document.getElementById(id).style.display = 'block';
+        break;
+
+      default:
+        document.getElementById('edit-profile-modal').style.display = 'block';
+        break;
+    }
   }
 
   function pushFocusedClass(id) {
@@ -80,7 +94,7 @@ export default function Profile() {
               <span>Ewerson Vieira</span>
               <span>-</span>
               <span>@v1eira</span>
-              <EditButton onClick={(e) => openModal(e)}>
+              <EditButton onClick={(e) => openModal(e, 'profile')}>
                 <span>Editar perfil</span>
               </EditButton>
               <EditProfileModal />
@@ -119,16 +133,18 @@ export default function Profile() {
             </ProfileInfoItem>
             <Stats>
               <Following>
-                <Link to="/profile">
+                <Link onClick={(e) => openModal(e, 'following')}>
                   <span>seguindo</span>
-                  <span>10</span>
+                  <span className="following-spaced">10</span>
                 </Link>
+                <UserListModal name="Seguindo" id="following" />
               </Following>
-              <Followers>
-                <Link to="/profile">
+              <Followers className="stats-spaced">
+                <Link onClick={(e) => openModal(e, 'followers')}>
                   <span>100</span>
-                  <span>seguidores</span>
+                  <span className="followers-spaced">seguidores</span>
                 </Link>
+                <UserListModal name="Seguidores" id="followers" />
               </Followers>
               <FollowButton>
                 <FaHeart size={20} color="#999" />
@@ -149,28 +165,28 @@ export default function Profile() {
           </ProfileInfo>
 
           <TimelineSelector>
-            <Link
+            <Selector
               to="/profile"
               className="focused"
               onClick={() => pushFocusedClass('respostas')}
               id="respostas"
             >
               <span>Respostas</span>
-            </Link>
-            <Link
+            </Selector>
+            <Selector
               to="/profile"
               onClick={() => pushFocusedClass('perguntas')}
               id="perguntas"
             >
               <span>Perguntas</span>
-            </Link>
-            <Link
+            </Selector>
+            <Selector
               to="/profile"
               onClick={() => pushFocusedClass('curtidas')}
               id="curtidas"
             >
               <span>Curtidas</span>
-            </Link>
+            </Selector>
           </TimelineSelector>
 
           <TimeLine />

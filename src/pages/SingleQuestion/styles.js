@@ -181,9 +181,10 @@ export const Likes = styled.div`
   }
 `;
 
-export const Count = styled.span`
+export const Count = styled.a`
+  cursor: pointer;
   margin-left: 5px;
-  font-size: 14px;
+  font-size: 15px;
   color: #999;
   word-spacing: 3px;
 

@@ -170,7 +170,7 @@ export const Stats = styled.div`
 
   margin-top: 15px;
 
-  div + div {
+  .stats-spaced {
     margin-left: 15px;
   }
 `;
@@ -188,7 +188,7 @@ export const Following = styled.div`
     color: #999;
   }
 
-  span + span {
+  .following-spaced {
     margin-left: 5px;
     color: #fff;
     font-weight: bold;
@@ -209,7 +209,7 @@ export const Followers = styled.div`
     font-weight: bold;
   }
 
-  span + span {
+  .followers-spaced {
     margin-left: 5px;
     color: #999;
     font-weight: normal;
@@ -363,4 +363,8 @@ export const TimelineSelector = styled.div`
       background: ${lighten(0.05, '#000')};
     }
   }
+`;
+
+export const Selector = styled.a`
+  cursor: pointer;
 `;

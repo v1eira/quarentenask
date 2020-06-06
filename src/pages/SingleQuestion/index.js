@@ -35,9 +35,9 @@ import {
 export default function SingleQuestion() {
   changeAddressBarColor('#000');
 
-  function openModal(e) {
+  function openModal(e, id) {
     e.preventDefault();
-    document.getElementById('user-list-modal').style.display = 'block';
+    document.getElementById(id).style.display = 'block';
     e.stopPropagation();
   }
 
@@ -96,10 +96,10 @@ export default function SingleQuestion() {
                 <Link className="heart" to="/question">
                   <FaRegHeart color="#666" />
                 </Link>
-                <Link id="likesList" onClick={(e) => openModal(e)}>
-                  <Count>14 Curtidas</Count>
-                </Link>
-                <UserListModal />
+                <Count onClick={(e) => openModal(e, 'likes')}>
+                  14 Curtidas
+                </Count>
+                <UserListModal name="Curtidas" id="likes" />
               </Likes>
             </AnswerFooter>
           </Section>

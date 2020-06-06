@@ -23,9 +23,9 @@ import {
 } from './styles';
 
 export default function Question() {
-  function openModal(e) {
+  function openModal(e, id) {
     e.preventDefault();
-    document.getElementById('user-list-modal').style.display = 'block';
+    document.getElementById(id).style.display = 'block';
     e.stopPropagation();
   }
 
@@ -44,6 +44,7 @@ export default function Question() {
           <img
             src="https://api.adorable.io/avatars/285/abott@adorablb.png"
             alt="img"
+            className="user-img"
           />
         </Link>
         <QuestionContent>
@@ -76,16 +77,17 @@ export default function Question() {
             <Link className="heart" onClick={(e) => handleClick(e, '/home')}>
               <FaRegHeart color="#666" />
             </Link>
-            <Link onClick={(e) => openModal(e)}>
-              <Count>14</Count>
+            <Link>
+              <Count onClick={(e) => openModal(e, 'likes')}>14</Count>
             </Link>
-            <UserListModal />
+            <UserListModal name="Curtidas" id="likes" />
           </Likes>
         </AnswerContent>
         <Link onClick={(e) => handleClick(e, '/profile')}>
           <img
             src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
             alt="img"
+            className="user-img"
           />
         </Link>
       </AnswerInfo>

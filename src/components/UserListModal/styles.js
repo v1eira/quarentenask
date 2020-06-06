@@ -53,9 +53,9 @@ export const ModalHeader = styled.div`
 `;
 
 export const ModalName = styled.span`
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
+  color: #fff !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
 `;
 
 export const UserList = styled.div`
