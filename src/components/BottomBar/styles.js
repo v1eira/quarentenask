@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
 
 export const Container = styled.div`
   position: fixed;
@@ -23,7 +22,7 @@ export const Container = styled.div`
 export const NavButton = styled.button`
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 5px;
   background: transparent;
   cursor: pointer;
   outline: none;
@@ -33,7 +32,7 @@ export const NavButton = styled.button`
   svg {
     margin: 0;
     padding: 0;
-    font-size: 30px;
+    font-size: 22px;
     color: #fff;
     opacity: 0.5;
 
@@ -42,13 +41,5 @@ export const NavButton = styled.button`
 
   .focused {
     opacity: 1;
-  }
-
-  &:hover {
-    background: ${lighten(0.05, '#000')};
-
-    svg {
-      opacity: 1;
-    }
   }
 `;

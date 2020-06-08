@@ -205,7 +205,7 @@ export const InputField = styled.div`
 export const LogoutButton = styled.button`
   align-self: center;
   cursor: pointer;
-  width: 240px;
+  width: 200px;
   border: none;
   border-radius: 6px;
   background: #dc143c;

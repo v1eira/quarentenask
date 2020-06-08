@@ -276,7 +276,7 @@ export const Question = styled.div`
   textarea {
     width: 100%;
     padding: 15px 0;
-    background: #0d0d0d;
+    background: ${lighten(0.01, '#0d0d0d')};
     border: 0;
     border-radius: 12px;
     text-align: center;
