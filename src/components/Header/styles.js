@@ -28,6 +28,10 @@ export const Container = styled.div`
       opacity: 1;
     }
   }
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `;
 
 export const NavigationButtons = styled.div`

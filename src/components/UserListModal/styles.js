@@ -37,7 +37,6 @@ export const ModalHeader = styled.div`
   border-bottom: 1px solid #333;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   svg {
@@ -56,6 +55,7 @@ export const ModalName = styled.span`
   color: #fff !important;
   font-size: 22px !important;
   font-weight: bold !important;
+  margin-left: 20px;
 `;
 
 export const UserList = styled.div`

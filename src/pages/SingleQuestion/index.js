@@ -7,6 +7,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import changeAddressBarColor from '../../components/changeAddressBarColor';
 
 import Header from '../../components/Header';
+import BottomBar from '../../components/BottomBar';
 import PageBar from '../../components/PageBar';
 import UserListModal from '../../components/UserListModal';
 
@@ -105,6 +106,8 @@ export default function SingleQuestion() {
           </Section>
         </Container>
       </Content>
+
+      <BottomBar />
     </Wrapper>
   );
 }

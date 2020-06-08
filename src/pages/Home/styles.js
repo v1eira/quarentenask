@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   z-index: 1;
 
   background: #000;
+
+  @media (max-width: 450px) {
+    height: calc(100vh - 48px);
+  }
 `;
 
 export const Content = styled.div`
@@ -17,6 +21,10 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 68px 0 20px;
+
+  @media (max-width: 450px) {
+    margin: 0 0 20px;
+  }
 `;
 
 export const TopBar = styled.div`

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Content = styled.div`
   width: 680px;
-  padding: 5px 0;
+  height: 50px;
   position: fixed;
   z-index: 1;
 

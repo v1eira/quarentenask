@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import changeAddressBarColor from '../../components/changeAddressBarColor';
 
 import Header from '../../components/Header';
+import BottomBar from '../../components/BottomBar';
 import PageBar from '../../components/PageBar';
 import Timeline from '../../components/TimeLine';
 
@@ -53,6 +54,7 @@ export default function Trending() {
 
         <Timeline />
       </Content>
+      <BottomBar />
     </Wrapper>
   );
 }

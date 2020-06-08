@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { FaAt, FaInstagram, FaTimes, FaTwitter } from 'react-icons/fa';
 
 import {
@@ -7,12 +8,16 @@ import {
   ModalContent,
   ModalHeader,
   ModalName,
+  SaveButton,
   UserInfo,
   Images,
   InputField,
+  LogoutButton,
 } from './styles';
 
 function EditProfileModal() {
+  const history = useHistory();
+
   function closeModal(e) {
     const eventId = e.target.getAttribute('id');
     const parentNodeId = e.target.parentNode.getAttribute('id');
@@ -37,8 +42,11 @@ function EditProfileModal() {
     <Modal id="edit-profile-modal" onClick={(e) => closeModal(e)}>
       <ModalContent>
         <ModalHeader>
-          <ModalName>Editar perfil</ModalName>
           <FaTimes id="closeModal" color="#999" />
+          <ModalName>Editar perfil</ModalName>
+          <SaveButton>
+            <span>Salvar</span>
+          </SaveButton>
         </ModalHeader>
         <UserInfo>
           <Images>
@@ -89,6 +97,13 @@ function EditProfileModal() {
             <span className="input-label">Data de nascimento</span>
             <input type="text" />
           </InputField>
+          <LogoutButton
+            onClick={() => {
+              history.push('/');
+            }}
+          >
+            <span>Sair</span>
+          </LogoutButton>
         </UserInfo>
       </ModalContent>
     </Modal>

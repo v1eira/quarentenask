@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   position: absolute;
   z-index: 1;
   background: #000;
+
+  @media (max-width: 450px) {
+    height: calc(100vh - 48px);
+  }
 `;
 
 export const Content = styled.div`
@@ -26,6 +30,10 @@ export const Content = styled.div`
     border: none;
     width: 100%;
     margin: 68px 0 0;
+  }
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
   }
 `;
 

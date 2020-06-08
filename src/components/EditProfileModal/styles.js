@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken, lighten } from 'polished';
 
 export const Modal = styled.div`
   cursor: default;
@@ -37,11 +38,12 @@ export const ModalHeader = styled.div`
   border-bottom: 1px solid #333;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   svg {
     font-size: 22px;
+    margin: 0;
+    padding: 0;
 
     &:hover,
     &:focus {
@@ -56,11 +58,48 @@ export const ModalName = styled.span`
   color: #fff;
   font-size: 22px;
   font-weight: bold;
+  margin-left: 30px;
+
+  @media (max-width: 450px) {
+    margin-left: 15px;
+  }
+`;
+
+export const SaveButton = styled.button`
+  margin-left: auto;
+  cursor: pointer;
+
+  border: 1px solid #999;
+  border-radius: 20px;
+  background: transparent;
+  padding: 5px 10px;
+
+  transition: 0.2s;
+
+  span {
+    font-size: 15px !important;
+    color: #999;
+    transition: 0.2s;
+  }
+
+  &:hover {
+    border-color: #fff;
+    background: ${lighten(0.05, '#000')};
+    span {
+      color: #fff;
+    }
+  }
 `;
 
 export const UserInfo = styled.div`
   overflow-y: auto;
   max-height: calc(80vh - 57px);
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 450px) {
+    max-height: calc(80vh - 67px);
+  }
 `;
 
 export const Images = styled.div`
@@ -163,15 +202,28 @@ export const InputField = styled.div`
   }
 `;
 
-export const ListContent = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+export const LogoutButton = styled.button`
+  align-self: center;
+  cursor: pointer;
+  width: 240px;
+  border: none;
+  border-radius: 6px;
+  background: #dc143c;
+  padding: 12px 0;
+  margin: 10px 0 !important;
 
-  width: 100%;
+  transition: 0.2s background;
 
-  li:last-child {
-    border: none;
-    border-bottom-left-radius: 12px;
+  span {
+    font-size: 15px !important;
+  }
+
+  &:hover {
+    background: ${darken(0.1, '#dc143c')};
+  }
+
+  @media (max-width: 450px) {
+    padding: 10px 20px;
+    margin: 0 20px 15px;
   }
 `;

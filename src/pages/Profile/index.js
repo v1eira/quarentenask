@@ -13,6 +13,7 @@ import {
 import changeAddressBarColor from '../../components/changeAddressBarColor';
 
 import Header from '../../components/Header';
+import BottomBar from '../../components/BottomBar';
 import PageBar from '../../components/PageBar';
 import TimeLine from '../../components/TimeLine';
 import EditProfileModal from '../../components/EditProfileModal';
@@ -192,6 +193,8 @@ export default function Profile() {
           <TimeLine />
         </Content>
       </UserProfile>
+
+      <BottomBar />
     </Wrapper>
   );
 }

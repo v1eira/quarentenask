@@ -17,6 +17,10 @@ export const Wrapper = styled.div`
   textarea {
     outline: none;
   }
+
+  @media (max-width: 450px) {
+    height: calc(100vh - 48px);
+  }
 `;
 
 export const UserProfile = styled.div`
@@ -29,6 +33,10 @@ export const UserProfile = styled.div`
 
   @media (max-width: 700px) {
     border: none;
+  }
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
   }
 `;
 

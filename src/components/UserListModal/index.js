@@ -38,8 +38,8 @@ function UserListModal({ name, id }) {
     <Modal id={id} onClick={(e) => closeModal(e)}>
       <ModalContent>
         <ModalHeader>
-          <ModalName>{name}</ModalName>
           <FaTimes id="closeModal" color="#999" />
+          <ModalName>{name}</ModalName>
         </ModalHeader>
         <UserList>
           <ListContent>
