@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   background: #000;
 
   @media (max-width: 450px) {
-    height: calc(100vh - 48px);
+    height: calc(100vh - 53px);
   }
 `;
 

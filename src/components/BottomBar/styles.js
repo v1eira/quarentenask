@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: fixed;
-  top: calc(100% - 48px);
+  top: calc(100% - 53px);
   width: 100%;
-  height: 48px;
+  height: 52px;
 
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ export const NavButton = styled.button`
   svg {
     margin: 0;
     padding: 0;
-    font-size: 22px;
+    font-size: 25px;
     color: #fff;
     opacity: 0.5;
 

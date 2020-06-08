@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   }
 
   @media (max-width: 450px) {
-    height: calc(100vh - 48px);
+    height: calc(100vh - 53px);
   }
 `;
 
