@@ -7,12 +7,14 @@ import {
   FaChartLine,
   FaUser,
   FaPowerOff,
+  FaBell,
 } from 'react-icons/fa';
 
 import {
   Container,
   NavigationButtons,
   NavButton,
+  Badge,
   LogoutButton,
 } from './styles';
 
@@ -68,6 +70,10 @@ export default function Header() {
         >
           <FaChartLine id="trending-button" />
         </NavButton>
+
+        <Badge hasUnread>
+          <FaBell id="notification-button" />
+        </Badge>
 
         <NavButton
           onClick={() => {

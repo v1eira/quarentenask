@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   position: fixed;
@@ -42,4 +42,27 @@ export const NavButton = styled.button`
   .focused {
     opacity: 1;
   }
+`;
+
+export const Badge = styled(NavButton)`
+  position: relative;
+
+  svg {
+    font-size: 22px;
+  }
+
+  ${(props) =>
+    props.hasUnread &&
+    css`
+      &::after {
+        top: 0;
+        right: 0;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #ff892e;
+        content: '';
+        border-radius: 50%;
+      }
+    `}
 `;

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { FaHome, FaSearch, FaChartLine, FaUser } from 'react-icons/fa';
+import { FaHome, FaSearch, FaChartLine, FaUser, FaBell } from 'react-icons/fa';
 
-import { Container, NavButton } from './styles';
+import { Container, NavButton, Badge } from './styles';
 
 export default function BottomBar() {
   const history = useHistory();
@@ -55,6 +55,10 @@ export default function BottomBar() {
       >
         <FaChartLine id="bottom-trending-btn" />
       </NavButton>
+
+      <Badge hasUnread>
+        <FaBell id="bottom-notification-btn" />
+      </Badge>
 
       <NavButton
         onClick={() => {

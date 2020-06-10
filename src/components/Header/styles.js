@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { lighten } from 'polished';
 
 export const Container = styled.div`
@@ -76,6 +76,29 @@ export const NavButton = styled.button`
       opacity: 1;
     }
   }
+`;
+
+export const Badge = styled(NavButton)`
+  position: relative;
+
+  svg {
+    font-size: 27px;
+  }
+
+  ${(props) =>
+    props.hasUnread &&
+    css`
+      &::after {
+        top: 13px;
+        right: 12px;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #ff892e;
+        content: '';
+        border-radius: 50%;
+      }
+    `}
 `;
 
 export const LogoutButton = styled(NavButton)`
