@@ -81,10 +81,6 @@ export const NavButton = styled.button`
 export const Badge = styled(NavButton)`
   position: relative;
 
-  svg {
-    font-size: 27px;
-  }
-
   &::after {
     display: ${(props) => (props.hasUnread ? 'block' : 'none')};
     top: 8px;

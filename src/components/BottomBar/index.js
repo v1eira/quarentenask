@@ -1,7 +1,14 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { FaHome, FaSearch, FaChartLine, FaUser, FaBell } from 'react-icons/fa';
+import {
+  FaHome,
+  FaSearch,
+  FaChartLine,
+  FaUser,
+  FaBell,
+  FaEnvelope,
+} from 'react-icons/fa';
 
 import { Container, NavButton, Badge } from './styles';
 
@@ -29,6 +36,9 @@ export default function BottomBar() {
         document
           .getElementById('bottom-notification-btn')
           .classList.add('focused');
+        break;
+      case '/inbox':
+        document.getElementById('bottom-inbox-btn').classList.add('focused');
         break;
       default:
         break;
@@ -60,6 +70,16 @@ export default function BottomBar() {
       >
         <FaChartLine id="bottom-trending-btn" />
       </NavButton>
+
+      <Badge
+        hasUnread
+        content="10"
+        onClick={() => {
+          navigateTo('/inbox');
+        }}
+      >
+        <FaEnvelope id="bottom-inbox-btn" />
+      </Badge>
 
       <Badge
         hasUnread

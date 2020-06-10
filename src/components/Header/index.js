@@ -8,6 +8,7 @@ import {
   FaUser,
   FaPowerOff,
   FaBell,
+  FaEnvelope,
 } from 'react-icons/fa';
 
 import {
@@ -41,6 +42,9 @@ export default function Header() {
       case '/notifications':
         document.getElementById('notification-button').classList.add('focused');
         break;
+      case '/inbox':
+        document.getElementById('inbox-button').classList.add('focused');
+        break;
       default:
         break;
     }
@@ -73,6 +77,16 @@ export default function Header() {
         >
           <FaChartLine id="trending-button" />
         </NavButton>
+
+        <Badge
+          hasUnread
+          content="10"
+          onClick={() => {
+            navigateTo('/inbox');
+          }}
+        >
+          <FaEnvelope size={30} id="inbox-button" />
+        </Badge>
 
         <Badge
           hasUnread
