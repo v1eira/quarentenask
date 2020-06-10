@@ -53,15 +53,16 @@ export const Badge = styled(NavButton)`
 
   &::after {
     display: ${(props) => (props.hasUnread ? 'block' : 'none')};
-    top: -4px;
-    right: -4px;
+    top: -1px;
+    right: -3px;
     position: absolute;
-    width: 19px;
+    width: 20px;
     background: #ff892e;
     content: '${(props) => props.content}';
     font-size: 10px;
     font-weight: bold;
-    padding: 4px 0;
+    text-align: center;
+    padding: 4px 0px;
     color: #fff;
     border-radius: 50%;
   }
