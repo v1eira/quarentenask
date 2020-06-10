@@ -25,6 +25,11 @@ export default function BottomBar() {
       case '/profile':
         document.getElementById('bottom-profile-btn').classList.add('focused');
         break;
+      case '/notifications':
+        document
+          .getElementById('bottom-notification-btn')
+          .classList.add('focused');
+        break;
       default:
         break;
     }
@@ -56,7 +61,12 @@ export default function BottomBar() {
         <FaChartLine id="bottom-trending-btn" />
       </NavButton>
 
-      <Badge hasUnread>
+      <Badge
+        hasUnread
+        onClick={() => {
+          navigateTo('/notifications');
+        }}
+      >
         <FaBell id="bottom-notification-btn" />
       </Badge>
 

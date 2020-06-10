@@ -8,6 +8,7 @@ import Home from '../pages/Home';
 import Profile from '../pages/Profile';
 import SingleQuestion from '../pages/SingleQuestion';
 import Trending from '../pages/Trending';
+import Notifications from '../pages/Notifications';
 
 export default function Routes() {
   return (
@@ -19,6 +20,7 @@ export default function Routes() {
       <Route path="/profile" component={Profile} />
       <Route path="/question" component={SingleQuestion} />
       <Route path="/trending" component={Trending} />
+      <Route path="/notifications" component={Notifications} />
     </Switch>
   );
 }

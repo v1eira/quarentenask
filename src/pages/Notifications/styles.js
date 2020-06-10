@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
 
 export const Wrapper = styled.div`
   width: 100vw;
@@ -19,7 +18,6 @@ export const Content = styled.div`
   width: 680px;
   min-height: calc(100vh - 83px);
   margin: 68px auto 0;
-  padding-bottom: 15px;
 
   display: flex;
   flex-direction: column;
@@ -38,36 +36,16 @@ export const Content = styled.div`
   }
 `;
 
-export const FilterSelector = styled.div`
+export const Container = styled.div`
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  background: #000;
-  margin-bottom: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-  a {
-    width: 100%;
-    padding: 15px 0;
-    text-align: center;
-
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: #999;
-    border-bottom: 1px solid #555;
-
-    &:focus {
-      color: #fff;
-      border-color: #fff;
-    }
-
-    &:hover {
-      color: #fff;
-      background: ${lighten(0.05, '#000')};
-    }
-  }
-
-  .focused {
-    color: #fff;
-    border-color: #fff;
-  }
+export const NotificationList = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 `;

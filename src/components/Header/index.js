@@ -38,6 +38,9 @@ export default function Header() {
       case '/profile':
         document.getElementById('profile-button').classList.add('focused');
         break;
+      case '/notifications':
+        document.getElementById('notification-button').classList.add('focused');
+        break;
       default:
         break;
     }
@@ -71,7 +74,12 @@ export default function Header() {
           <FaChartLine id="trending-button" />
         </NavButton>
 
-        <Badge hasUnread>
+        <Badge
+          hasUnread
+          onClick={() => {
+            navigateTo('/notifications');
+          }}
+        >
           <FaBell id="notification-button" />
         </Badge>
 
