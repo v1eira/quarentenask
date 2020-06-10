@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   position: fixed;
@@ -51,18 +51,18 @@ export const Badge = styled(NavButton)`
     font-size: 22px;
   }
 
-  ${(props) =>
-    props.hasUnread &&
-    css`
-      &::after {
-        top: 0;
-        right: 0;
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        background: #ff892e;
-        content: '';
-        border-radius: 50%;
-      }
-    `}
+  &::after {
+    display: ${(props) => (props.hasUnread ? 'block' : 'none')};
+    top: -4px;
+    right: -4px;
+    position: absolute;
+    width: 19px;
+    background: #ff892e;
+    content: '${(props) => props.content}';
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 0;
+    color: #fff;
+    border-radius: 50%;
+  }
 `;

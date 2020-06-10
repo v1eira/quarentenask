@@ -63,6 +63,7 @@ export default function BottomBar() {
 
       <Badge
         hasUnread
+        content="10"
         onClick={() => {
           navigateTo('/notifications');
         }}

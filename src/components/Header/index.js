@@ -76,6 +76,7 @@ export default function Header() {
 
         <Badge
           hasUnread
+          content="10"
           onClick={() => {
             navigateTo('/notifications');
           }}
