@@ -16,7 +16,7 @@ import {
 } from './styles';
 
 export default function SignIn() {
-  changeAddressBarColor('#141419');
+  changeAddressBarColor('#16161c');
 
   const history = useHistory();
 

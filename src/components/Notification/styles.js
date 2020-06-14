@@ -6,13 +6,13 @@ export const Container = styled.li`
   display: flex;
   align-items: center;
   cursor: pointer;
-  background: #141419;
+  background: #16161c;
   padding: 10px 25px;
 
   border-bottom: 1px solid #333;
 
   &:hover {
-    background: ${lighten(0.02, '#141419')};
+    background: ${lighten(0.02, '#16161c')};
   }
 
   @media (max-width: 700px) {

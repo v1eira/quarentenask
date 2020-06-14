@@ -30,7 +30,7 @@ export const GoBackButton = styled.button`
   transition: 0.2s background;
 
   &:hover {
-    background: #141419;
+    background: #16161c;
   }
 `;
 

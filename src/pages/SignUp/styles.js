@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  background: #141419;
+  background: #16161c;
 `;
 
 export const Container = styled.div`
@@ -79,6 +79,7 @@ export const InputField = styled.div`
     height: 40px;
     padding: 0 20px;
     color: #000;
+    outline: none;
 
     &::placeholder {
       color: rgba(0, 0, 0, 0.7);
@@ -94,20 +95,20 @@ export const SubmitButton = styled.button`
 
   background: #fff;
   color: #fff;
-  border: 1px solid #141419;
+  border: 1px solid #16161c;
   border-radius: 22px;
 
   transition: background 0.2s;
 
   &:hover {
-    background: #141419;
+    background: #16161c;
     span {
       color: #fff;
     }
   }
 
   span {
-    color: #141419;
+    color: #16161c;
     font-size: 16px;
     font-weight: bold;
 
@@ -116,7 +117,7 @@ export const SubmitButton = styled.button`
 `;
 
 export const RedirectText = styled.span`
-  color: #141419;
+  color: #16161c;
 
   &:hover {
     text-decoration: underline;

@@ -157,7 +157,7 @@ export const InputField = styled.div`
 
   display: flex;
   flex-direction: column;
-  background: #141419;
+  background: #16161c;
   border-radius: 6px;
 
   .input-label {

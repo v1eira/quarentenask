@@ -38,7 +38,7 @@ export const Content = styled.div`
 `;
 
 export const Container = styled.li`
-  background: #141419;
+  background: #16161c;
   width: calc(100% - 20px);
   padding: 15px 10px;
 

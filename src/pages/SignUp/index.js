@@ -16,7 +16,7 @@ import {
 } from './styles';
 
 export default function SignUp() {
-  changeAddressBarColor('#141419');
+  changeAddressBarColor('#16161c');
 
   const history = useHistory();
   return (

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 
 export const Container = styled.li`
-  background: #141419;
+  background: #16161c;
   width: 640px;
   border-radius: 12px;
   padding: 10px;
@@ -26,7 +26,7 @@ export const Container = styled.li`
   }
 
   &:hover {
-    background: ${lighten(0.02, '#141419')};
+    background: ${lighten(0.02, '#16161c')};
   }
 
   @media (max-width: 800px) {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { lighten, darken } from 'polished';
 
 export const Container = styled.li`
-  background: #141419;
+  background: #16161c;
   width: 640px;
   border-radius: 12px;
   padding: 10px;
@@ -130,7 +130,7 @@ export const AnswerContent = styled.textarea`
   outline: none;
   border: none;
   width: 100%;
-  background: ${lighten(0.03, '#141419')};
+  background: ${lighten(0.03, '#16161c')};
   border-radius: 12px;
   color: #fff;
   resize: none;
