@@ -9,7 +9,7 @@ export const Modal = styled.div`
   left: 0;
   top: 0;
   width: 100%;
-  height: 110%;
+  height: 100%;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.3);
 `;
@@ -21,6 +21,7 @@ export const ModalContent = styled.div`
   max-width: 600px;
   min-height: 300px;
   max-height: 80vh;
+  padding-bottom: 5px;
 
   @media (max-width: 700px) {
     margin-left: 10%;

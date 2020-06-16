@@ -70,7 +70,13 @@ function EditProfileModal() {
     dateInputMask(input);
   });
 
-  document.addEventListener('keydown', onEscDown);
+  useEffect(() => {
+    document.addEventListener('keydown', onEscDown);
+
+    return () => {
+      document.removeEventListener('keydown', onEscDown);
+    };
+  });
 
   return (
     <Modal id="edit-profile-modal" onClick={(e) => closeModal(e)}>

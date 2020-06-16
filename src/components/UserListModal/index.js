@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FaTimes } from 'react-icons/fa';
 
@@ -32,7 +32,13 @@ function UserListModal({ name, id }) {
     if (e.key === 'Escape') closeModal(e);
   }
 
-  document.addEventListener('keydown', onEscDown);
+  useEffect(() => {
+    document.addEventListener('keydown', onEscDown);
+
+    return () => {
+      document.removeEventListener('keydown', onEscDown);
+    };
+  });
 
   return (
     <Modal id={id} onClick={(e) => closeModal(e)}>
