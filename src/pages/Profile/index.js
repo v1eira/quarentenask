@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FaInstagram,
@@ -59,19 +59,14 @@ export default function Profile() {
     }
   }
 
-  function pushFocusedClass(id) {
-    const ids = ['respostas', 'perguntas', 'curtidas'];
+  const [focused, setFocused] = useState('respostas');
+  const [newFocus, setNewFocus] = useState('respostas');
 
-    const e = document.getElementById(id);
-    e.classList.add('focused');
-
-    for (let i = 0; i < ids.length; i += 1) {
-      if (ids[i] !== id) {
-        const el = document.getElementById(ids[i]);
-        if (el.classList.length > 0) el.classList.remove('focused');
-      }
-    }
-  }
+  useEffect(() => {
+    document.getElementById(focused).classList.remove('focused');
+    document.getElementById(newFocus).classList.add('focused');
+    setFocused(newFocus);
+  }, [focused, newFocus]);
 
   return (
     <Wrapper>
@@ -169,21 +164,21 @@ export default function Profile() {
             <Selector
               to="/profile"
               className="focused"
-              onClick={() => pushFocusedClass('respostas')}
+              onClick={() => setNewFocus('respostas')}
               id="respostas"
             >
               <span>Respostas</span>
             </Selector>
             <Selector
               to="/profile"
-              onClick={() => pushFocusedClass('perguntas')}
+              onClick={() => setNewFocus('perguntas')}
               id="perguntas"
             >
               <span>Perguntas</span>
             </Selector>
             <Selector
               to="/profile"
-              onClick={() => pushFocusedClass('curtidas')}
+              onClick={() => setNewFocus('curtidas')}
               id="curtidas"
             >
               <span>Curtidas</span>

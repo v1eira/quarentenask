@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -14,19 +14,14 @@ import { Wrapper, Content, FilterSelector } from './styles';
 export default function Trending() {
   changeAddressBarColor('#000');
 
-  function pushFocusedClass(id) {
-    const ids = ['todos', 'seguindo'];
+  const [focused, setFocused] = useState('todos');
+  const [newFocus, setNewFocus] = useState('todos');
 
-    const e = document.getElementById(id);
-    e.classList.add('focused');
-
-    for (let i = 0; i < ids.length; i += 1) {
-      if (ids[i] !== id) {
-        const el = document.getElementById(ids[i]);
-        if (el.classList.length > 0) el.classList.remove('focused');
-      }
-    }
-  }
+  useEffect(() => {
+    document.getElementById(focused).classList.remove('focused');
+    document.getElementById(newFocus).classList.add('focused');
+    setFocused(newFocus);
+  }, [focused, newFocus]);
 
   return (
     <Wrapper>
@@ -38,14 +33,14 @@ export default function Trending() {
           <Link
             to="/trending"
             className="focused"
-            onClick={() => pushFocusedClass('todos')}
+            onClick={() => setNewFocus('todos')}
             id="todos"
           >
             <span>Todos</span>
           </Link>
           <Link
             to="/trending"
-            onClick={() => pushFocusedClass('seguindo')}
+            onClick={() => setNewFocus('seguindo')}
             id="seguindo"
           >
             <span>Seguindo</span>
