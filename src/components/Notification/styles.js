@@ -3,8 +3,6 @@ import { lighten } from 'polished';
 
 export const Container = styled.li`
   width: 630px;
-  display: flex;
-  align-items: center;
   cursor: pointer;
   background: #16161c;
   padding: 10px 25px;
@@ -17,6 +15,16 @@ export const Container = styled.li`
 
   @media (max-width: 700px) {
     width: calc(100% - 50px);
+  }
+`;
+
+export const Item = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 500px) {
+    width: 80vw;
+    margin: 0 5%;
   }
 `;
 

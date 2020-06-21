@@ -5,6 +5,7 @@ import { FaHeart } from 'react-icons/fa';
 
 import {
   Container,
+  Item,
   LeftSide,
   Content,
   User,
@@ -24,23 +25,27 @@ export default function Notification() {
 
   return (
     <Container onClick={(e) => handleClick(e, '/question')}>
-      <LeftSide>
-        <FaHeart />
-      </LeftSide>
-      <Content>
-        <User>
-          <Link onClick={(e) => handleClick(e, '/home')}>
-            <img
-              src="https://api.adorable.io/avatars/285/abott@adorablb.png"
-              alt="img"
-            />
-          </Link>
-          <UserTag onClick={(e) => handleClick(e, '/home')}>@anab_leao</UserTag>
-        </User>
-        <Message>
-          <Name>Bellatrix</Name> curtiu sua resposta
-        </Message>
-      </Content>
+      <Item>
+        <LeftSide>
+          <FaHeart />
+        </LeftSide>
+        <Content>
+          <User>
+            <Link onClick={(e) => handleClick(e, '/home')}>
+              <img
+                src="https://api.adorable.io/avatars/285/abott@adorablb.png"
+                alt="img"
+              />
+            </Link>
+            <UserTag onClick={(e) => handleClick(e, '/home')}>
+              @anab_leao
+            </UserTag>
+          </User>
+          <Message>
+            <Name>Bellatrix</Name> curtiu sua resposta
+          </Message>
+        </Content>
+      </Item>
     </Container>
   );
 }
