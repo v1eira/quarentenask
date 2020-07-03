@@ -52,8 +52,8 @@ export const SearchBar = styled.div`
 export const SearchContent = styled.div`
   align-self: center;
   background: #16161c;
-  padding: 10px 0;
-  width: 90%;
+  padding: 12px 0;
+  width: 95%;
   height: 20px;
   margin: 15px 0;
   border-radius: 20px;
@@ -65,10 +65,14 @@ export const SearchContent = styled.div`
     background: ${lighten(0.02, '#16161c')};
   }
 
+  @media (max-width: 450px) {
+    width: 85%;
+  }
+
   input {
     background: transparent;
     padding: 10px 15px;
-    border-radius: 20px;
+    border-radius: 50%;
     border: none;
     outline: none;
     color: #fff;
