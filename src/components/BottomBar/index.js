@@ -26,6 +26,9 @@ export default function BottomBar() {
       case '/home':
         document.getElementById('bottom-home-btn').classList.add('focused');
         break;
+      case '/search':
+        document.getElementById('bottom-search-btn').classList.add('focused');
+        break;
       case '/trending':
         document.getElementById('bottom-trending-btn').classList.add('focused');
         break;
@@ -59,8 +62,12 @@ export default function BottomBar() {
         <FaHome id="bottom-home-btn" />
       </NavButton>
 
-      <NavButton id="search-button">
-        <FaSearch />
+      <NavButton
+        onClick={() => {
+          navigateTo('/search');
+        }}
+      >
+        <FaSearch id="bottom-search-btn" />
       </NavButton>
 
       <NavButton

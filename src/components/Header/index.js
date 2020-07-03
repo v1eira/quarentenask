@@ -33,6 +33,9 @@ export default function Header() {
       case '/home':
         document.getElementById('home-button').classList.add('focused');
         break;
+      case '/search':
+        document.getElementById('search-button').classList.add('focused');
+        break;
       case '/trending':
         document.getElementById('trending-button').classList.add('focused');
         break;
@@ -66,8 +69,12 @@ export default function Header() {
           <FaHome id="home-button" />
         </NavButton>
 
-        <NavButton id="search-button">
-          <FaSearch />
+        <NavButton
+          onClick={() => {
+            navigateTo('/search');
+          }}
+        >
+          <FaSearch id="search-button" />
         </NavButton>
 
         <NavButton

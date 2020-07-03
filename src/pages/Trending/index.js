@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react';
-
-import { Link } from 'react-router-dom';
 
 import changeAddressBarColor from '../../components/changeAddressBarColor';
 
@@ -30,21 +31,16 @@ export default function Trending() {
         <PageBar name="Mais curtidas" />
 
         <FilterSelector>
-          <Link
-            to="/trending"
+          <a
             className="focused"
             onClick={() => setNewFocus('todos')}
             id="todos"
           >
             <span>Todos</span>
-          </Link>
-          <Link
-            to="/trending"
-            onClick={() => setNewFocus('seguindo')}
-            id="seguindo"
-          >
+          </a>
+          <a onClick={() => setNewFocus('seguindo')} id="seguindo">
             <span>Seguindo</span>
-          </Link>
+          </a>
         </FilterSelector>
 
         <Timeline />

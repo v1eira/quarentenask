@@ -10,6 +10,7 @@ import SingleQuestion from '../pages/SingleQuestion';
 import Trending from '../pages/Trending';
 import Inbox from '../pages/Inbox';
 import Notifications from '../pages/Notifications';
+import Search from '../pages/Search';
 
 export default function Routes() {
   return (
@@ -23,6 +24,7 @@ export default function Routes() {
       <Route path="/trending" component={Trending} />
       <Route path="/inbox" component={Inbox} />
       <Route path="/notifications" component={Notifications} />
+      <Route path="/search" component={Search} />
     </Switch>
   );
 }

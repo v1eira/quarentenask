@@ -10,12 +10,12 @@ export const Wrapper = styled.div`
   z-index: 1;
   background: #000;
 
-  a {
-    cursor: pointer;
-  }
-
   @media (max-width: 450px) {
     height: calc(100vh - 53px);
+  }
+
+  a {
+    cursor: pointer;
   }
 `;
 
@@ -39,6 +39,67 @@ export const Content = styled.div`
 
   @media (max-width: 450px) {
     margin: 0 auto;
+  }
+`;
+
+export const SearchBar = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const SearchContent = styled.div`
+  align-self: center;
+  background: #16161c;
+  padding: 10px 0;
+  width: 90%;
+  height: 20px;
+  margin: 15px 0;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+
+  &:focus {
+    background: ${lighten(0.02, '#16161c')};
+  }
+
+  input {
+    background: transparent;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 100%;
+
+    @media (max-width: 500px) {
+      width: 85%;
+    }
+  }
+
+  .reset-button {
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: 5px;
+
+    color: #999;
+
+    transition: 0.2s color;
+
+    svg {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      color: #fff;
+    }
   }
 `;
 
