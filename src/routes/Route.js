@@ -9,12 +9,11 @@ import DefaultLayout from '../pages/_layouts/default';
 
 export default function RouteWrapper({
   component: Component,
+  isAuth,
   // isPrivate = false,
   ...rest
 }) {
-  const authPages = Component.name === 'SignIn' || Component.name === 'SignUp';
-
-  const Layout = authPages ? AuthLayout : DefaultLayout;
+  const Layout = isAuth ? AuthLayout : DefaultLayout;
 
   // const signed = false;
 
@@ -40,10 +39,12 @@ export default function RouteWrapper({
 
 RouteWrapper.propTypes = {
   isPrivate: PropTypes.bool,
+  isAuth: PropTypes.bool,
   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
     .isRequired,
 };
 
 RouteWrapper.defaultProps = {
   isPrivate: false,
+  isAuth: false,
 };

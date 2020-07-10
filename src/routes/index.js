@@ -16,8 +16,8 @@ import Search from '../pages/Search';
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/" exact component={SignIn} />
-      <Route path="/signup" component={SignUp} />
+      <Route path="/" exact component={SignIn} isAuth />
+      <Route path="/signup" component={SignUp} isAuth />
 
       <Route path="/home" component={Home} />
       <Route path="/profile" component={Profile} />
