@@ -4,8 +4,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
 
-import changeAddressBarColor from '../../components/changeAddressBarColor';
-
 import PageBar from '../../components/PageBar';
 import UserListModal from '../../components/UserListModal';
 
@@ -31,8 +29,6 @@ import {
 } from './styles';
 
 export default function SingleQuestion() {
-  changeAddressBarColor('#000');
-
   function openModal(e, id) {
     e.preventDefault();
     document.getElementById(id).style.display = 'block';

@@ -3,16 +3,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react';
 
-import changeAddressBarColor from '../../components/changeAddressBarColor';
-
 import PageBar from '../../components/PageBar';
 import Timeline from '../../components/TimeLine';
 
 import { Content, FilterSelector } from './styles';
 
 export default function Trending() {
-  changeAddressBarColor('#000');
-
   const [focused, setFocused] = useState('todos');
   const [newFocus, setNewFocus] = useState('todos');
 

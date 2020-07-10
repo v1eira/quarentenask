@@ -5,16 +5,12 @@ import React, { useState, useEffect } from 'react';
 
 import { FaTimesCircle } from 'react-icons/fa';
 
-import changeAddressBarColor from '../../components/changeAddressBarColor';
-
 import PageBar from '../../components/PageBar';
 import Timeline from '../../components/TimeLine';
 
 import { Content, SearchBar, SearchContent, FilterSelector } from './styles';
 
 export default function Search() {
-  changeAddressBarColor('#000');
-
   const [search, setSearch] = useState('');
   const [showBtn, setshowBtn] = useState(false);
 

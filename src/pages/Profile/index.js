@@ -11,8 +11,6 @@ import {
   FaHeart,
 } from 'react-icons/fa';
 
-import changeAddressBarColor from '../../components/changeAddressBarColor';
-
 import PageBar from '../../components/PageBar';
 import TimeLine from '../../components/TimeLine';
 import EditProfileModal from '../../components/EditProfileModal';
@@ -38,8 +36,6 @@ import {
 } from './styles';
 
 export default function Profile({ toggleTheme }) {
-  changeAddressBarColor('#000');
-
   function openModal(e, id) {
     e.preventDefault();
     e.stopPropagation();
