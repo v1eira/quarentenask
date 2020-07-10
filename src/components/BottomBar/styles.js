@@ -11,8 +11,8 @@ export const Container = styled.div`
   justify-content: space-around;
   z-index: 1;
 
-  background: #000;
-  border-top: 1px solid #333;
+  background: ${(props) => props.theme.colors.background};
+  border-top: 1px solid ${(props) => props.theme.colors.border};
 
   @media (min-width: 451px) {
     display: none;
@@ -33,8 +33,8 @@ export const NavButton = styled.button`
     margin: 0;
     padding: 0;
     font-size: 25px;
-    color: #fff;
-    opacity: 0.5;
+    color: ${(props) => props.theme.colors.icon};
+    opacity: 0.4;
 
     transition: 0.2s opacity;
   }

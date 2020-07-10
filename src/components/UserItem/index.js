@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Info, Name, User, Follow } from './styles';
 
-function UserCard() {
+function UserItem() {
   const src = `https://api.adorable.io/avatars/285/abott${Math.floor(
     Math.random() * 1000
   )}@adorableb.png`;
@@ -18,4 +18,4 @@ function UserCard() {
   );
 }
 
-export default UserCard;
+export default UserItem;

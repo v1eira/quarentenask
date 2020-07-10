@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   position: absolute;
   z-index: 1;
 
-  background: #000;
+  background: ${(props) => props.theme.colors.background};
 
   @media (max-width: 450px) {
     height: calc(100vh - 53px);

@@ -1,8 +1,18 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import { FaAt, FaInstagram, FaTimes, FaTwitter } from 'react-icons/fa';
+import {
+  FaMoon,
+  FaSun,
+  FaAt,
+  FaInstagram,
+  FaTimes,
+  FaTwitter,
+} from 'react-icons/fa';
+import Switch from 'react-switch';
+import { ThemeContext } from 'styled-components';
 
 import {
   Modal,
@@ -16,8 +26,10 @@ import {
   LogoutButton,
 } from './styles';
 
-function EditProfileModal() {
+function EditProfileModal({ toggleTheme }) {
   const history = useHistory();
+
+  const { title, colors } = useContext(ThemeContext);
 
   function closeModal(e) {
     const eventId = e.target.getAttribute('id');
@@ -82,7 +94,7 @@ function EditProfileModal() {
     <Modal id="edit-profile-modal" onClick={(e) => closeModal(e)}>
       <ModalContent>
         <ModalHeader>
-          <FaTimes id="closeModal" color="#999" />
+          <FaTimes id="closeModal" />
           <ModalName>Editar perfil</ModalName>
           <SaveButton>
             <span>Salvar</span>
@@ -101,6 +113,23 @@ function EditProfileModal() {
               className="profile-image"
             />
           </Images>
+          <div className="switch">
+            <FaMoon id="dark" />
+            <Switch
+              onChange={toggleTheme}
+              checked={title === 'light'}
+              checkedIcon={false}
+              uncheckedIcon={false}
+              height={10}
+              width={40}
+              handleDiameter={20}
+              offColor={colors.noFocus}
+              onColor={colors.noFocus}
+              offHandleColor={colors.primary}
+              onHandleColor={colors.primary}
+            />
+            <FaSun id="light" />
+          </div>
           <InputField>
             <span className="input-label">Nome</span>
             <input type="text" />
@@ -156,3 +185,7 @@ function EditProfileModal() {
 }
 
 export default EditProfileModal;
+
+EditProfileModal.propTypes = {
+  toggleTheme: PropTypes.func.isRequired,
+};

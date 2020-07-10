@@ -17,7 +17,7 @@ export default function PageBar({ name }) {
     <>
       <Content>
         <GoBackButton onClick={handleGoBack}>
-          <FaArrowLeft size={18} color="#fff" opacity={0.8} />
+          <FaArrowLeft size={18} opacity={0.8} />
         </GoBackButton>
         <PageName>{name}</PageName>
       </Content>

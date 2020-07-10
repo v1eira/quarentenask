@@ -9,8 +9,8 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
 
-  border-bottom: 1px solid #333;
-  background: #000;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  background: ${(props) => props.theme.colors.background};
 
   button {
     margin: 0 20px;
@@ -22,6 +22,7 @@ export const GoBackButton = styled.button`
   background: transparent;
   cursor: pointer;
   outline: none;
+  color: ${(props) => props.theme.colors.icon};
 
   width: 40px;
   height: 40px;
@@ -30,12 +31,12 @@ export const GoBackButton = styled.button`
   transition: 0.2s background;
 
   &:hover {
-    background: #16161c;
+    background: ${(props) => props.theme.colors.card};
   }
 `;
 
 export const PageName = styled.span`
-  color: white;
+  color: ${(props) => props.theme.colors.text};
   font-size: 22px;
   font-weight: bold;
 `;

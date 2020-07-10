@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
   FaInstagram,
@@ -36,7 +37,7 @@ import {
   Selector,
 } from './styles';
 
-export default function Profile() {
+export default function Profile({ toggleTheme }) {
   changeAddressBarColor('#000');
 
   function openModal(e, id) {
@@ -87,7 +88,7 @@ export default function Profile() {
             <EditButton onClick={(e) => openModal(e, 'profile')}>
               <span>Editar perfil</span>
             </EditButton>
-            <EditProfileModal />
+            <EditProfileModal toggleTheme={toggleTheme} />
           </NameAndUser>
           <SocialMedia>
             <FaInstagram size={20} />
@@ -184,3 +185,7 @@ export default function Profile() {
     </UserProfile>
   );
 }
+
+Profile.propTypes = {
+  toggleTheme: PropTypes.func.isRequired,
+};

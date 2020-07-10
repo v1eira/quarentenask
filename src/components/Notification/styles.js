@@ -4,13 +4,16 @@ import { lighten } from 'polished';
 export const Container = styled.li`
   width: 630px;
   cursor: pointer;
-  background: #16161c;
+  background: ${(props) => props.theme.colors.card};
   padding: 10px 25px;
 
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
 
   &:hover {
-    background: ${lighten(0.02, '#16161c')};
+    background: ${(props) =>
+      props.theme.title === 'dark'
+        ? lighten(0.02, props.theme.colors.card)
+        : props.theme.colors.item};
   }
 
   @media (max-width: 700px) {
@@ -31,7 +34,7 @@ export const Item = styled.div`
 export const LeftSide = styled.div`
   svg {
     font-size: 20px;
-    color: #fff;
+    color: ${(props) => props.theme.colors.icon};
   }
 `;
 
@@ -62,7 +65,7 @@ export const UserTag = styled.a`
   cursor: pointer;
   outline: none;
   text-decoration: none;
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary};
   font-size: 14px;
 
   &:hover {
@@ -72,10 +75,10 @@ export const UserTag = styled.a`
 export const Message = styled.span`
   margin-top: 8px;
   font-size: 16px;
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary};
 `;
 
 export const Name = styled.span`
   font-weight: bold;
-  color: #fff;
+  color: ${(props) => props.theme.colors.text};
 `;

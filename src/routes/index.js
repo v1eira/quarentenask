@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Route from './Route';
 
 import SignIn from '../pages/SignIn';
@@ -13,14 +14,17 @@ import Inbox from '../pages/Inbox';
 import Notifications from '../pages/Notifications';
 import Search from '../pages/Search';
 
-export default function Routes() {
+export default function Routes({ toggleTheme }) {
   return (
     <Switch>
       <Route path="/" exact component={SignIn} isAuth />
       <Route path="/signup" component={SignUp} isAuth />
 
       <Route path="/home" component={Home} />
-      <Route path="/profile" component={Profile} />
+      <Route
+        path="/profile"
+        component={() => <Profile toggleTheme={toggleTheme} />}
+      />
       <Route path="/question" component={SingleQuestion} />
       <Route path="/trending" component={Trending} />
       <Route path="/inbox" component={Inbox} />
@@ -29,3 +33,7 @@ export default function Routes() {
     </Switch>
   );
 }
+
+Routes.propTypes = {
+  toggleTheme: PropTypes.func.isRequired,
+};

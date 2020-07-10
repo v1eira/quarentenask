@@ -22,7 +22,9 @@ export default function QuestionReceived() {
 
   function handleClick(e, path) {
     e.preventDefault();
-    history.push(path);
+    if (path !== window.location.pathname) {
+      history.push(path);
+    }
     e.stopPropagation();
   }
 

@@ -15,14 +15,18 @@ export const Content = styled.div`
 export const TopBar = styled.div`
   position: fixed;
   z-index: 1;
-  width: 660px;
+  width: 670px;
   padding: 12px 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #000;
+  background: ${(props) => props.theme.colors.background};
+
+  span {
+    color: ${(props) => props.theme.colors.text};
+  }
 
   @media (max-width: 700px) {
     width: 100vw;

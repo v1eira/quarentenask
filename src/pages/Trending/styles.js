@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 export const Content = styled.div`
   width: 680px;
@@ -10,8 +10,8 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  border-right: 1px solid #333;
-  border-left: 1px solid #333;
+  border-right: 1px solid ${(props) => props.theme.colors.border};
+  border-left: 1px solid ${(props) => props.theme.colors.border};
 
   a {
     cursor: pointer;
@@ -31,7 +31,7 @@ export const Content = styled.div`
 export const FilterSelector = styled.div`
   display: flex;
   justify-content: space-around;
-  background: #000;
+  background: ${(props) => props.theme.colors.background};
   margin-bottom: 15px;
 
   a {
@@ -42,22 +42,25 @@ export const FilterSelector = styled.div`
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    color: #999;
-    border-bottom: 1px solid #555;
+    color: ${(props) => props.theme.colors.noFocus};
+    border-bottom: 1px solid ${(props) => props.theme.colors.border};
 
     &:focus {
-      color: #fff;
-      border-color: #fff;
+      color: ${(props) => props.theme.colors.primary};
+      border-color: ${(props) => props.theme.colors.primary};
     }
 
     &:hover {
-      color: #fff;
-      background: ${lighten(0.05, '#000')};
+      color: ${(props) => props.theme.colors.primary};
+      background: ${(props) =>
+        props.theme.title === 'dark'
+          ? lighten(0.05, props.theme.colors.background)
+          : darken(0.05, props.theme.colors.background)};
     }
   }
 
   .focused {
-    color: #fff;
-    border-color: #fff;
+    color: ${(props) => props.theme.colors.primary};
+    border-color: ${(props) => props.theme.colors.primary};
   }
 `;

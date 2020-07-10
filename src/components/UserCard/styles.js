@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 export const Container = styled.li`
   display: flex;
@@ -7,7 +7,7 @@ export const Container = styled.li`
   cursor: pointer;
 
   background-color: transparent;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   padding: 10px 20px;
   margin: 0 !important;
 
@@ -20,7 +20,10 @@ export const Container = styled.li`
   }
 
   &:hover {
-    background-color: ${lighten(0.08, '#000')};
+    background-color: ${(props) =>
+      props.theme.title === 'dark'
+        ? lighten(0.08, props.theme.colors.background)
+        : darken(0.08, props.theme.colors.background)};
   }
 `;
 
@@ -31,11 +34,13 @@ export const Info = styled.div`
 `;
 
 export const Name = styled.span`
-  color: #fff;
+  color: ${(props) => props.theme.colors.text} !important;
+  font-weight: bold;
 `;
 
 export const User = styled.span`
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary} !important;
+  font-weight: normal !important;
 `;
 
 export const Follow = styled.button`
@@ -46,7 +51,7 @@ export const Follow = styled.button`
   text-align: center;
   padding-bottom: 2px;
 
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary};
   font-size: 15px;
   font-weight: bold;
   outline: none;
@@ -54,12 +59,12 @@ export const Follow = styled.button`
   width: 80px;
   height: 30px;
   border-radius: 40px;
-  border: 1px solid #999;
+  border: 1px solid ${(props) => props.theme.colors.noFocus};
 
   transition: 0.2s;
 
   &:hover {
-    border-color: #fff;
-    color: #fff;
+    border-color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
   }
 `;

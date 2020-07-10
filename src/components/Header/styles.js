@@ -12,15 +12,15 @@ export const Container = styled.div`
   justify-content: space-between;
   z-index: 1;
 
-  background: #000;
-  border-bottom: 1px solid #333;
+  background: ${(props) => props.theme.colors.background};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
 
   a {
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
-    opacity: 0.5;
+    color: ${(props) => props.theme.colors.headerButton};
+    opacity: 0.6;
 
     transition: 0.2s opacity;
 
@@ -59,7 +59,7 @@ export const NavButton = styled.button`
     margin: 0;
     padding: 0;
     font-size: 30px;
-    color: #fff;
+    color: ${(props) => props.theme.colors.headerButton};
     opacity: 0.5;
 
     transition: 0.2s opacity;
@@ -70,7 +70,8 @@ export const NavButton = styled.button`
   }
 
   &:hover {
-    background: ${lighten(0.05, '#000')};
+    background: ${(props) =>
+      lighten(0.05, props.theme.colors.headerButtonHover)};
 
     svg {
       opacity: 1;

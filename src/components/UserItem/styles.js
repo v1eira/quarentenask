@@ -8,7 +8,7 @@ export const Container = styled.li`
 
   width: 620px;
 
-  background-color: #16161c;
+  background-color: ${(props) => props.theme.colors.item};
   border: none;
   border-radius: 12px;
   padding: 20px;
@@ -22,7 +22,7 @@ export const Container = styled.li`
   }
 
   &:hover {
-    background: ${lighten(0.02, '#16161c')};
+    background: ${(props) => lighten(0.02, props.theme.colors.item)};
   }
 
   @media (max-width: 700px) {
@@ -37,11 +37,12 @@ export const Info = styled.div`
 `;
 
 export const Name = styled.span`
-  color: #fff;
+  color: ${(props) => props.theme.colors.text};
+  font-weight: bold;
 `;
 
 export const User = styled.span`
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary};
 `;
 
 export const Follow = styled.button`
@@ -52,7 +53,7 @@ export const Follow = styled.button`
   text-align: center;
   padding-bottom: 2px;
 
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary};
   font-size: 15px;
   font-weight: bold;
   outline: none;
@@ -60,12 +61,12 @@ export const Follow = styled.button`
   width: 80px;
   height: 30px;
   border-radius: 40px;
-  border: 1px solid #999;
+  border: 1px solid ${(props) => props.theme.colors.noFocus};
 
   transition: 0.2s;
 
   &:hover {
-    border-color: #fff;
-    color: #fff;
+    border-color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
   }
 `;

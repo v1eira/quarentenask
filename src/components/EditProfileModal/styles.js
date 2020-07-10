@@ -11,11 +11,11 @@ export const Modal = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${(props) => props.theme.colors.modalBackground};
 `;
 
 export const ModalContent = styled.div`
-  background-color: #000;
+  background-color: ${(props) => props.theme.colors.background};
   margin: 10vh auto;
   border-radius: 12px;
   max-width: 600px;
@@ -36,10 +36,14 @@ export const ModalContent = styled.div`
 
 export const ModalHeader = styled.div`
   padding: 15px 20px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
 
   display: flex;
   align-items: center;
+
+  #closeModal {
+    color: ${(props) => props.theme.colors.noFocus};
+  }
 
   svg {
     font-size: 22px;
@@ -48,7 +52,7 @@ export const ModalHeader = styled.div`
 
     &:hover,
     &:focus {
-      color: white !important;
+      color: ${(props) => props.theme.colors.primary} !important;
       text-decoration: none;
       cursor: pointer;
     }
@@ -56,7 +60,7 @@ export const ModalHeader = styled.div`
 `;
 
 export const ModalName = styled.span`
-  color: #fff;
+  color: ${(props) => props.theme.colors.text};
   font-size: 22px;
   font-weight: bold;
   margin-left: 30px;
@@ -70,7 +74,7 @@ export const SaveButton = styled.button`
   margin-left: auto;
   cursor: pointer;
 
-  border: 1px solid #999;
+  border: 1px solid ${(props) => props.theme.colors.quaternary};
   border-radius: 20px;
   background: transparent;
   padding: 5px 10px;
@@ -79,15 +83,18 @@ export const SaveButton = styled.button`
 
   span {
     font-size: 15px !important;
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
     transition: 0.2s;
   }
 
   &:hover {
-    border-color: #fff;
-    background: ${lighten(0.05, '#000')};
+    border-color: ${(props) => props.theme.colors.text};
+    background: ${(props) =>
+      props.theme.title === 'dark'
+        ? lighten(0.05, props.theme.colors.background)
+        : darken(0.05, props.theme.colors.background)};
     span {
-      color: #fff;
+      color: ${(props) => props.theme.colors.text};
     }
   }
 `;
@@ -97,6 +104,24 @@ export const UserInfo = styled.div`
   max-height: calc(80vh - 57px);
   display: flex;
   flex-direction: column;
+
+  .switch {
+    padding: 0px 20px 20px;
+    display: flex;
+    align-items: center;
+
+    #dark {
+      font-size: 22px;
+      margin-right: 10px;
+      color: ${(props) => props.theme.colors.icon};
+    }
+
+    #light {
+      font-size: 22px;
+      margin-left: 10px;
+      color: ${(props) => props.theme.colors.icon};
+    }
+  }
 
   @media (max-width: 450px) {
     max-height: calc(80vh - 67px);
@@ -158,16 +183,16 @@ export const InputField = styled.div`
 
   display: flex;
   flex-direction: column;
-  background: #16161c;
+  background: ${(props) => props.theme.colors.item};
   border-radius: 6px;
 
   .input-label {
     font-size: 16px;
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
     margin-bottom: 5px;
 
     svg {
-      color: #999;
+      color: ${(props) => props.theme.colors.icon};
       font-size: 16px;
       margin: 0;
       padding: 0;
@@ -181,7 +206,7 @@ export const InputField = styled.div`
     align-items: baseline;
 
     label {
-      color: #999;
+      color: ${(props) => props.theme.colors.noFocus};
       font-size: 14px;
       padding-right: 1px;
       -webkit-touch-callout: none;
@@ -197,7 +222,7 @@ export const InputField = styled.div`
     width: 100%;
     border: 0;
     background: transparent;
-    color: #fff;
+    color: ${(props) => props.theme.colors.text};
     outline: none;
     font-size: 14px;
   }
@@ -217,6 +242,7 @@ export const LogoutButton = styled.button`
 
   span {
     font-size: 15px !important;
+    color: white !important;
   }
 
   &:hover {

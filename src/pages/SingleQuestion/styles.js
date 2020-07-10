@@ -8,8 +8,8 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  border-right: 1px solid #333;
-  border-left: 1px solid #333;
+  border-right: 1px solid ${(props) => props.theme.colors.border};
+  border-left: 1px solid ${(props) => props.theme.colors.border};
 
   @media (max-width: 700px) {
     border: none;
@@ -23,7 +23,7 @@ export const Content = styled.div`
 `;
 
 export const Container = styled.li`
-  background: #16161c;
+  background: ${(props) => props.theme.colors.card};
   width: calc(100% - 20px);
   padding: 15px 10px;
 
@@ -81,7 +81,7 @@ export const UserInfo = styled.div`
 
   a {
     text-decoration: none;
-    color: #333;
+    color: ${(props) => props.theme.colors.secondary};
   }
 
   @media (max-width: 400px) {
@@ -92,7 +92,7 @@ export const UserInfo = styled.div`
 export const Name = styled.span`
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
+  color: ${(props) => props.theme.colors.text};
 
   &:hover {
     opacity: 0.9;
@@ -102,7 +102,7 @@ export const Name = styled.span`
 
 export const User = styled.span`
   font-size: 14px;
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary};
   margin: 0 10px;
 `;
 
@@ -112,7 +112,7 @@ export const AnswerUser = styled(User)`
 
 export const Time = styled.span`
   font-size: 14px;
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary};
   margin-left: 10px;
 `;
 
@@ -124,12 +124,12 @@ export const AnswerTime = styled(Time)`
 
 export const QuestionText = styled.span`
   font-size: 18px;
-  color: #fff;
+  color: ${(props) => props.theme.colors.text};
 `;
 
 export const Separator = styled.div`
   margin: 5px 0 10px;
-  border-top: 1px solid #555;
+  border-top: 1px solid ${(props) => props.theme.colors.border};
 
   @media (max-width: 400px) {
     margin: 15px 0;
@@ -143,7 +143,7 @@ export const AnswerContent = styled(QuestionContent)`
 
 export const AnswerText = styled.span`
   font-size: 18px;
-  color: #fff;
+  color: ${(props) => props.theme.colors.text};
 
   @media (max-width: 400px) {
     align-self: flex-start;
@@ -178,7 +178,7 @@ export const Count = styled.a`
   cursor: pointer;
   margin-left: 5px;
   font-size: 15px;
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary};
   word-spacing: 3px;
 
   &:hover {
@@ -193,5 +193,5 @@ export const AnswerFooter = styled.div`
   justify-content: flex-end;
   padding-bottom: 5px;
 
-  color: #999;
+  color: ${(props) => props.theme.colors.quaternary};
 `;

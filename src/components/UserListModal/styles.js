@@ -10,11 +10,11 @@ export const Modal = styled.div`
   width: 100%;
   height: 110%;
   overflow: auto;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${(props) => props.theme.colors.modalBackground};
 `;
 
 export const ModalContent = styled.div`
-  background-color: #000;
+  background-color: ${(props) => props.theme.colors.background};
   margin: 20vh auto;
   border-radius: 12px;
   max-width: 500px;
@@ -34,17 +34,21 @@ export const ModalContent = styled.div`
 
 export const ModalHeader = styled.div`
   padding: 15px 20px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
 
   display: flex;
   align-items: center;
+
+  #closeModal {
+    color: ${(props) => props.theme.colors.noFocus};
+  }
 
   svg {
     font-size: 22px;
 
     &:hover,
     &:focus {
-      color: white !important;
+      color: ${(props) => props.theme.colors.primary} !important;
       text-decoration: none;
       cursor: pointer;
     }
@@ -52,7 +56,7 @@ export const ModalHeader = styled.div`
 `;
 
 export const ModalName = styled.span`
-  color: #fff !important;
+  color: ${(props) => props.theme.colors.text} !important;
   font-size: 22px !important;
   font-weight: bold !important;
   margin-left: 20px;

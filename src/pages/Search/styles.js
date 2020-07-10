@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 export const Content = styled.div`
   width: 680px;
@@ -10,8 +10,8 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  border-right: 1px solid #333;
-  border-left: 1px solid #333;
+  border-right: 1px solid ${(props) => props.theme.colors.border};
+  border-left: 1px solid ${(props) => props.theme.colors.border};
 
   a {
     cursor: pointer;
@@ -37,7 +37,7 @@ export const SearchBar = styled.div`
 
 export const SearchContent = styled.div`
   align-self: center;
-  background: #16161c;
+  background: ${(props) => props.theme.colors.item};
   padding: 12px 0;
   width: 95%;
   height: 20px;
@@ -47,10 +47,6 @@ export const SearchContent = styled.div`
   display: flex;
   align-items: center;
 
-  &:focus {
-    background: ${lighten(0.02, '#16161c')};
-  }
-
   @media (max-width: 450px) {
     width: 85%;
   }
@@ -58,10 +54,9 @@ export const SearchContent = styled.div`
   input {
     background: transparent;
     padding: 10px 15px;
-    border-radius: 50%;
     border: none;
     outline: none;
-    color: #fff;
+    color: ${(props) => props.theme.colors.text};
     width: 100%;
 
     @media (max-width: 500px) {
@@ -77,7 +72,7 @@ export const SearchContent = styled.div`
     margin-left: auto;
     margin-right: 5px;
 
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
 
     transition: 0.2s color;
 
@@ -88,7 +83,7 @@ export const SearchContent = styled.div`
     }
 
     &:hover {
-      color: #fff;
+      color: ${(props) => props.theme.colors.primary};
     }
   }
 `;
@@ -96,7 +91,7 @@ export const SearchContent = styled.div`
 export const FilterSelector = styled.div`
   display: flex;
   justify-content: space-around;
-  background: #000;
+  background: ${(props) => props.theme.colors.background};
   margin-bottom: 15px;
 
   a {
@@ -107,22 +102,25 @@ export const FilterSelector = styled.div`
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    color: #999;
-    border-bottom: 1px solid #555;
+    color: ${(props) => props.theme.colors.noFocus};
+    border-bottom: 1px solid ${(props) => props.theme.colors.border};
 
     &:focus {
-      color: #fff;
-      border-color: #fff;
+      color: ${(props) => props.theme.colors.primary};
+      border-color: ${(props) => props.theme.colors.primary};
     }
 
     &:hover {
-      color: #fff;
-      background: ${lighten(0.05, '#000')};
+      color: ${(props) => props.theme.colors.primary};
+      background: ${(props) =>
+        props.theme.title === 'dark'
+          ? lighten(0.05, props.theme.colors.background)
+          : darken(0.05, props.theme.colors.background)};
     }
   }
 
   .focused {
-    color: #fff;
-    border-color: #fff;
+    color: ${(props) => props.theme.colors.primary};
+    border-color: ${(props) => props.theme.colors.primary};
   }
 `;

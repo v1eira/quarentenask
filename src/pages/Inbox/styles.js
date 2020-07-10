@@ -8,8 +8,8 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  border-right: 1px solid #333;
-  border-left: 1px solid #333;
+  border-right: 1px solid ${(props) => props.theme.colors.border};
+  border-left: 1px solid ${(props) => props.theme.colors.border};
 
   @media (max-width: 700px) {
     border: none;

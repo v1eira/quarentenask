@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 export const UserProfile = styled.div`
   width: 680px;
   margin: 68px auto 0;
   background: transparent;
 
-  border-right: 1px solid #333;
-  border-left: 1px solid #333;
+  border-right: 1px solid ${(props) => props.theme.colors.border};
+  border-left: 1px solid ${(props) => props.theme.colors.border};
 
   button {
     outline: none;
@@ -63,7 +63,7 @@ export const Content = styled.div`
   padding: 0 15px 15px;
 
   svg {
-    color: #fff;
+    color: ${(props) => props.theme.colors.icon};
   }
 
   @media (max-width: 700px) {
@@ -77,7 +77,7 @@ export const ProfileInfo = styled.div`
 
   span {
     font-size: 16px;
-    color: #fff;
+    color: ${(props) => props.theme.colors.text};
   }
 `;
 
@@ -93,7 +93,7 @@ export const NameAndUser = styled.div`
 
   span + span {
     font-size: 14px;
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
     margin-left: 10px;
   }
 `;
@@ -102,7 +102,7 @@ export const EditButton = styled.button`
   margin-left: auto;
   cursor: pointer;
 
-  border: 1px solid #999;
+  border: 1px solid ${(props) => props.theme.colors.quaternary};
   border-radius: 20px;
   background: inherit;
   padding: 10px 15px;
@@ -111,15 +111,18 @@ export const EditButton = styled.button`
 
   span {
     font-size: 15px;
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
     transition: 0.2s;
   }
 
   &:hover {
-    border-color: #fff;
-    background: ${lighten(0.05, '#000')};
+    border-color: ${(props) => props.theme.colors.primary};
+    background: ${(props) =>
+      props.theme.title === 'dark'
+        ? lighten(0.05, props.theme.colors.background)
+        : darken(0.05, props.theme.colors.background)};
     span {
-      color: #fff;
+      color: ${(props) => props.theme.colors.text};
     }
   }
 `;
@@ -130,11 +133,11 @@ export const SocialMedia = styled.div`
   margin-top: 5px;
 
   a {
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
     text-decoration: underline;
 
     &:hover {
-      color: #fff;
+      color: ${(props) => props.theme.colors.primary};
     }
   }
 
@@ -174,17 +177,17 @@ export const Following = styled.div`
     text-decoration: none;
     &:hover {
       text-decoration: underline;
-      text-decoration-color: #fff;
+      text-decoration-color: ${(props) => props.theme.colors.text};
     }
   }
 
   span {
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
   }
 
   .following-spaced {
     margin-left: 5px;
-    color: #fff;
+    color: ${(props) => props.theme.colors.text};
     font-weight: bold;
   }
 `;
@@ -194,18 +197,18 @@ export const Followers = styled.div`
     text-decoration: none;
     &:hover {
       text-decoration: underline;
-      text-decoration-color: #fff;
+      text-decoration-color: ${(props) => props.theme.colors.text};
     }
   }
 
   span {
-    color: #fff;
+    color: ${(props) => props.theme.colors.text};
     font-weight: bold;
   }
 
   .followers-spaced {
     margin-left: 5px;
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
     font-weight: normal;
   }
 `;
@@ -226,15 +229,18 @@ export const FollowButton = styled.button`
     margin-left: 5px;
     font-size: 15px;
     font-weight: bold;
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
     display: none;
   }
 
   transition: 0.2s;
 
   &:hover {
-    border-color: #fff;
-    background: ${lighten(0.05, '#000')};
+    border-color: ${(props) => props.theme.colors.primary};
+    background: ${(props) =>
+      props.theme.title === 'dark'
+        ? lighten(0.05, props.theme.colors.background)
+        : darken(0.05, props.theme.colors.background)};
 
     span {
       display: block;
@@ -246,7 +252,7 @@ export const FollowButton = styled.button`
 
     span,
     svg {
-      color: #fff !important;
+      color: ${(props) => props.theme.colors.icon} !important;
     }
   }
 `;
@@ -262,17 +268,17 @@ export const Question = styled.div`
   textarea {
     width: 100%;
     padding: 15px 0;
-    background: ${lighten(0.01, '#0d0d0d')};
+    background: ${(props) => lighten(0.01, props.theme.colors.textarea)};
     border: 0;
     border-radius: 12px;
     text-align: center;
-    color: #fff;
+    color: ${(props) => props.theme.colors.text};
     font-size: 18px;
     resize: none;
     transition: 0.3s background;
 
     &:focus {
-      background: ${lighten(0.05, '#0d0d0d')};
+      background: ${(props) => lighten(0.05, props.theme.colors.textarea)};
 
       & + button {
         display: block;
@@ -298,7 +304,7 @@ export const QuestionButton = styled.button`
   width: 100px;
   padding: 10px;
   background: inherit;
-  border: 1px solid #999;
+  border: 1px solid ${(props) => props.theme.colors.quaternary};
   border-radius: 50px;
   cursor: pointer;
 
@@ -310,16 +316,19 @@ export const QuestionButton = styled.button`
 
   span {
     font-size: 15px;
-    color: #999;
+    color: ${(props) => props.theme.colors.quaternary};
   }
 
   &:hover {
-    border-color: #fff;
-    background: ${lighten(0.05, '#000')};
+    border-color: ${(props) => props.theme.colors.primary};
+    background: ${(props) =>
+      props.theme.title === 'dark'
+        ? lighten(0.05, props.theme.colors.background)
+        : darken(0.05, props.theme.colors.background)};
 
     span,
     svg {
-      color: #fff !important;
+      color: ${(props) => props.theme.colors.icon} !important;
     }
   }
 `;
@@ -329,11 +338,11 @@ export const TimelineSelector = styled.div`
   justify-content: space-around;
 
   margin: 20px 0;
-  background: #000;
+  background: ${(props) => props.theme.colors.background};
 
   .focused {
-    color: #fff;
-    border-color: #fff;
+    color: ${(props) => props.theme.colors.primary};
+    border-color: ${(props) => props.theme.colors.primary};
   }
 
   a {
@@ -344,17 +353,20 @@ export const TimelineSelector = styled.div`
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    color: #999;
-    border-bottom: 1px solid #555;
+    color: ${(props) => props.theme.colors.noFocus};
+    border-bottom: 1px solid ${(props) => props.theme.colors.border};
 
     &:focus {
-      color: #fff;
-      border-color: #fff;
+      color: ${(props) => props.theme.colors.primary};
+      border-color: ${(props) => props.theme.colors.primary};
     }
 
     &:hover {
-      color: #fff;
-      background: ${lighten(0.05, '#000')};
+      color: ${(props) => props.theme.colors.primary};
+      background: ${(props) =>
+        props.theme.title === 'dark'
+          ? lighten(0.05, props.theme.colors.background)
+          : darken(0.05, props.theme.colors.background)};
     }
   }
 `;
