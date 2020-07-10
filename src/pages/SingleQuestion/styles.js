@@ -102,7 +102,7 @@ export const Name = styled.span`
 
 export const User = styled.span`
   font-size: 14px;
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
   margin: 0 10px;
 `;
 
@@ -112,7 +112,7 @@ export const AnswerUser = styled(User)`
 
 export const Time = styled.span`
   font-size: 14px;
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
   margin-left: 10px;
 `;
 
@@ -178,7 +178,7 @@ export const Count = styled.a`
   cursor: pointer;
   margin-left: 5px;
   font-size: 15px;
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
   word-spacing: 3px;
 
   &:hover {
@@ -193,5 +193,5 @@ export const AnswerFooter = styled.div`
   justify-content: flex-end;
   padding-bottom: 5px;
 
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
 `;
