@@ -36,7 +36,7 @@ export const Images = styled.div`
   img + img {
     width: 150px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid ${(props) => props.theme.colors.background};
     position: absolute;
     top: 65%;
     left: 2%;
@@ -93,7 +93,7 @@ export const NameAndUser = styled.div`
 
   span + span {
     font-size: 14px;
-    color: ${(props) => props.theme.colors.quaternary};
+    color: ${(props) => props.theme.colors.tertiary};
     margin-left: 10px;
   }
 `;
@@ -133,7 +133,7 @@ export const SocialMedia = styled.div`
   margin-top: 5px;
 
   a {
-    color: ${(props) => props.theme.colors.quaternary};
+    color: ${(props) => props.theme.colors.tertiary};
     text-decoration: underline;
 
     &:hover {
@@ -182,7 +182,7 @@ export const Following = styled.div`
   }
 
   span {
-    color: ${(props) => props.theme.colors.quaternary};
+    color: ${(props) => props.theme.colors.tertiary};
   }
 
   .following-spaced {
@@ -208,7 +208,7 @@ export const Followers = styled.div`
 
   .followers-spaced {
     margin-left: 5px;
-    color: ${(props) => props.theme.colors.quaternary};
+    color: ${(props) => props.theme.colors.tertiary};
     font-weight: normal;
   }
 `;

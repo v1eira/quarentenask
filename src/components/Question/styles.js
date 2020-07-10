@@ -88,13 +88,13 @@ export const Name = styled.span`
 
 export const User = styled.span`
   font-size: 14px;
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
   margin: 0 10px 0 10px;
 `;
 
 export const Time = styled.span`
   font-size: 14px;
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
   margin-left: 10px;
 `;
 

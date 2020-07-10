@@ -62,7 +62,7 @@ export const UserInfo = styled.div`
 
   a {
     text-decoration: none;
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${(props) => props.theme.colors.tertiary};
   }
 
   @media (max-width: 400px) {
@@ -83,13 +83,13 @@ export const Name = styled.span`
 
 export const User = styled.span`
   font-size: 14px;
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
   margin: 0 10px 0 10px;
 `;
 
 export const Time = styled.span`
   font-size: 14px;
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
   margin-left: 10px;
 `;
 

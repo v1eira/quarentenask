@@ -39,7 +39,7 @@ export const Name = styled.span`
 `;
 
 export const User = styled.span`
-  color: ${(props) => props.theme.colors.quaternary} !important;
+  color: ${(props) => props.theme.colors.tertiary} !important;
   font-weight: normal !important;
 `;
 

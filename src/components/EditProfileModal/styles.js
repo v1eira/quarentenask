@@ -148,7 +148,7 @@ export const Images = styled.div`
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid ${(props) => props.theme.colors.background};
     position: absolute;
     top: 65%;
     left: 2%;

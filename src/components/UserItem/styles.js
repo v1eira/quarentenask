@@ -42,7 +42,7 @@ export const Name = styled.span`
 `;
 
 export const User = styled.span`
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
 `;
 
 export const Follow = styled.button`

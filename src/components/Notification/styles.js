@@ -65,7 +65,7 @@ export const UserTag = styled.a`
   cursor: pointer;
   outline: none;
   text-decoration: none;
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
   font-size: 14px;
 
   &:hover {
@@ -75,7 +75,7 @@ export const UserTag = styled.a`
 export const Message = styled.span`
   margin-top: 8px;
   font-size: 16px;
-  color: ${(props) => props.theme.colors.quaternary};
+  color: ${(props) => props.theme.colors.tertiary};
 `;
 
 export const Name = styled.span`

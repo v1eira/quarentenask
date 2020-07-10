@@ -7,7 +7,7 @@ export default {
     text: '#fff',
     icon: '#fff',
     secondary: '#333',
-    tertiary: '#666',
+    tertiary: '#999',
     quaternary: '#999',
     noFocus: '#999',
     card: '#16161c',
