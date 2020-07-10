@@ -7,18 +7,10 @@ import { FaTimesCircle } from 'react-icons/fa';
 
 import changeAddressBarColor from '../../components/changeAddressBarColor';
 
-import Header from '../../components/Header';
-import BottomBar from '../../components/BottomBar';
 import PageBar from '../../components/PageBar';
 import Timeline from '../../components/TimeLine';
 
-import {
-  Wrapper,
-  Content,
-  SearchBar,
-  SearchContent,
-  FilterSelector,
-} from './styles';
+import { Content, SearchBar, SearchContent, FilterSelector } from './styles';
 
 export default function Search() {
   changeAddressBarColor('#000');
@@ -54,42 +46,38 @@ export default function Search() {
   }
 
   return (
-    <Wrapper>
-      <Header />
-      <Content>
-        <PageBar name="Pesquisar" />
+    <Content>
+      <PageBar name="Pesquisar" />
 
-        <SearchBar>
-          <SearchContent>
-            <input
-              type="text"
-              placeholder="Buscar no QuarentenAsk"
-              autoCapitalize="off"
-              id="search-input"
-              onKeyUp={() =>
-                setSearch(document.getElementById('search-input').value)
-              }
-            />
-            {showBtn && (
-              <button type="button" className="reset-button">
-                <FaTimesCircle onClick={eraseSearch} />
-              </button>
-            )}
-          </SearchContent>
-        </SearchBar>
+      <SearchBar>
+        <SearchContent>
+          <input
+            type="text"
+            placeholder="Buscar no QuarentenAsk"
+            autoCapitalize="off"
+            id="search-input"
+            onKeyUp={() =>
+              setSearch(document.getElementById('search-input').value)
+            }
+          />
+          {showBtn && (
+            <button type="button" className="reset-button">
+              <FaTimesCircle onClick={eraseSearch} />
+            </button>
+          )}
+        </SearchContent>
+      </SearchBar>
 
-        <FilterSelector>
-          <a className="focused" onClick={() => setNewFocus('user')} id="user">
-            <span>Usuários</span>
-          </a>
-          <a onClick={() => setNewFocus('question')} id="question">
-            <span>Perguntas</span>
-          </a>
-        </FilterSelector>
+      <FilterSelector>
+        <a className="focused" onClick={() => setNewFocus('user')} id="user">
+          <span>Usuários</span>
+        </a>
+        <a onClick={() => setNewFocus('question')} id="question">
+          <span>Perguntas</span>
+        </a>
+      </FilterSelector>
 
-        <Timeline type={itemType} />
-      </Content>
-      <BottomBar />
-    </Wrapper>
+      <Timeline type={itemType} />
+    </Content>
   );
 }

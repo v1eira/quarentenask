@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 import {
@@ -23,39 +23,14 @@ export default function Header() {
   const history = useHistory();
 
   function navigateTo(path) {
-    if (window.location.pathname !== path) {
+    if (path !== window.location.pathname) {
       history.push(path);
     }
   }
 
-  function highlightPageButton() {
-    switch (window.location.pathname) {
-      case '/home':
-        document.getElementById('home-button').classList.add('focused');
-        break;
-      case '/search':
-        document.getElementById('search-button').classList.add('focused');
-        break;
-      case '/trending':
-        document.getElementById('trending-button').classList.add('focused');
-        break;
-      case '/profile':
-        document.getElementById('profile-button').classList.add('focused');
-        break;
-      case '/notifications':
-        document.getElementById('notification-button').classList.add('focused');
-        break;
-      case '/inbox':
-        document.getElementById('inbox-button').classList.add('focused');
-        break;
-      default:
-        break;
-    }
-  }
-
-  useEffect(() => {
-    highlightPageButton();
-  });
+  const same = (id) => {
+    return id === window.location.pathname.slice(1);
+  };
 
   return (
     <Container>
@@ -66,7 +41,7 @@ export default function Header() {
             navigateTo('/home');
           }}
         >
-          <FaHome id="home-button" />
+          <FaHome className={`${same('home') ? 'focused' : ''}`} />
         </NavButton>
 
         <NavButton
@@ -74,7 +49,7 @@ export default function Header() {
             navigateTo('/search');
           }}
         >
-          <FaSearch id="search-button" />
+          <FaSearch className={`${same('search') ? 'focused' : ''}`} />
         </NavButton>
 
         <NavButton
@@ -82,7 +57,7 @@ export default function Header() {
             navigateTo('/trending');
           }}
         >
-          <FaChartLine id="trending-button" />
+          <FaChartLine className={`${same('trending') ? 'focused' : ''}`} />
         </NavButton>
 
         <Badge
@@ -92,7 +67,10 @@ export default function Header() {
             navigateTo('/inbox');
           }}
         >
-          <FaEnvelope size={30} id="inbox-button" />
+          <FaEnvelope
+            size={30}
+            className={`${same('inbox') ? 'focused' : ''}`}
+          />
         </Badge>
 
         <Badge
@@ -102,7 +80,7 @@ export default function Header() {
             navigateTo('/notifications');
           }}
         >
-          <FaBell id="notification-button" />
+          <FaBell className={`${same('notifications') ? 'focused' : ''}`} />
         </Badge>
 
         <NavButton
@@ -110,7 +88,7 @@ export default function Header() {
             navigateTo('/profile');
           }}
         >
-          <FaUser id="profile-button" />
+          <FaUser className={`${same('profile') ? 'focused' : ''}`} />
         </NavButton>
       </NavigationButtons>
       <LogoutButton

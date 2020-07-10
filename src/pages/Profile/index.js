@@ -12,15 +12,12 @@ import {
 
 import changeAddressBarColor from '../../components/changeAddressBarColor';
 
-import Header from '../../components/Header';
-import BottomBar from '../../components/BottomBar';
 import PageBar from '../../components/PageBar';
 import TimeLine from '../../components/TimeLine';
 import EditProfileModal from '../../components/EditProfileModal';
 import UserListModal from '../../components/UserListModal';
 
 import {
-  Wrapper,
   UserProfile,
   Content,
   ProfileInfo,
@@ -69,127 +66,121 @@ export default function Profile() {
   }, [focused, newFocus]);
 
   return (
-    <Wrapper>
-      <Header />
-
-      <UserProfile>
-        <PageBar name="Perfil" />
-        <Images>
-          <img
-            src="https://pbs.twimg.com/profile_banners/1103890260205887488/1552027687/1500x500"
-            alt="cover"
-          />
-          <img
-            src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
-            alt="profile"
-          />
-        </Images>
-        <Content>
-          <ProfileInfo>
-            <NameAndUser>
-              <span>Ewerson Vieira</span>
-              <span>-</span>
-              <span>@v1eira</span>
-              <EditButton onClick={(e) => openModal(e, 'profile')}>
-                <span>Editar perfil</span>
-              </EditButton>
-              <EditProfileModal />
-            </NameAndUser>
-            <SocialMedia>
-              <FaInstagram size={20} />
-              <a
-                href="https://instagram.com/v1eira"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                @v1eira
-              </a>
-            </SocialMedia>
-            <SocialMedia>
-              <FaTwitter size={20} />
-              <a
-                href="https://twitter.com/v1eiran"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                @v1eiran
-              </a>
-            </SocialMedia>
-            <ProfileInfoItem>
-              <FaBirthdayCake size={20} />
-              <span>31/01/1996</span>
-            </ProfileInfoItem>
-            <ProfileInfoItem>
-              <FaMapMarkerAlt size={20} />
-              <span>Vila Velha, Brasil</span>
-            </ProfileInfoItem>
-            <ProfileInfoItem>
-              <FaRegCalendarAlt size={20} />
-              <span>Desde maio de 2020</span>
-            </ProfileInfoItem>
-            <Stats>
-              <Following>
-                <Link onClick={(e) => openModal(e, 'following')}>
-                  <span>seguindo</span>
-                  <span className="following-spaced">10</span>
-                </Link>
-                <UserListModal name="Seguindo" id="following" />
-              </Following>
-              <Followers className="stats-spaced">
-                <Link onClick={(e) => openModal(e, 'followers')}>
-                  <span>100</span>
-                  <span className="followers-spaced">seguidores</span>
-                </Link>
-                <UserListModal name="Seguidores" id="followers" />
-              </Followers>
-              <FollowButton>
-                <FaHeart size={20} color="#999" />
-                <span>Seguir</span>
-              </FollowButton>
-            </Stats>
-            <Question>
-              <textarea
-                name="question"
-                id="question"
-                rows="3"
-                placeholder="Faça-me uma pergunta"
-              />
-              <QuestionButton>
-                <span>Enviar</span>
-              </QuestionButton>
-            </Question>
-          </ProfileInfo>
-
-          <TimelineSelector>
-            <Selector
-              to="/profile"
-              className="focused"
-              onClick={() => setNewFocus('respostas')}
-              id="respostas"
+    <UserProfile>
+      <PageBar name="Perfil" />
+      <Images>
+        <img
+          src="https://pbs.twimg.com/profile_banners/1103890260205887488/1552027687/1500x500"
+          alt="cover"
+        />
+        <img
+          src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
+          alt="profile"
+        />
+      </Images>
+      <Content>
+        <ProfileInfo>
+          <NameAndUser>
+            <span>Ewerson Vieira</span>
+            <span>-</span>
+            <span>@v1eira</span>
+            <EditButton onClick={(e) => openModal(e, 'profile')}>
+              <span>Editar perfil</span>
+            </EditButton>
+            <EditProfileModal />
+          </NameAndUser>
+          <SocialMedia>
+            <FaInstagram size={20} />
+            <a
+              href="https://instagram.com/v1eira"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span>Respostas</span>
-            </Selector>
-            <Selector
-              to="/profile"
-              onClick={() => setNewFocus('perguntas')}
-              id="perguntas"
+              @v1eira
+            </a>
+          </SocialMedia>
+          <SocialMedia>
+            <FaTwitter size={20} />
+            <a
+              href="https://twitter.com/v1eiran"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span>Perguntas</span>
-            </Selector>
-            <Selector
-              to="/profile"
-              onClick={() => setNewFocus('curtidas')}
-              id="curtidas"
-            >
-              <span>Curtidas</span>
-            </Selector>
-          </TimelineSelector>
+              @v1eiran
+            </a>
+          </SocialMedia>
+          <ProfileInfoItem>
+            <FaBirthdayCake size={20} />
+            <span>31/01/1996</span>
+          </ProfileInfoItem>
+          <ProfileInfoItem>
+            <FaMapMarkerAlt size={20} />
+            <span>Vila Velha, Brasil</span>
+          </ProfileInfoItem>
+          <ProfileInfoItem>
+            <FaRegCalendarAlt size={20} />
+            <span>Desde maio de 2020</span>
+          </ProfileInfoItem>
+          <Stats>
+            <Following>
+              <Link onClick={(e) => openModal(e, 'following')}>
+                <span>seguindo</span>
+                <span className="following-spaced">10</span>
+              </Link>
+              <UserListModal name="Seguindo" id="following" />
+            </Following>
+            <Followers className="stats-spaced">
+              <Link onClick={(e) => openModal(e, 'followers')}>
+                <span>100</span>
+                <span className="followers-spaced">seguidores</span>
+              </Link>
+              <UserListModal name="Seguidores" id="followers" />
+            </Followers>
+            <FollowButton>
+              <FaHeart size={20} color="#999" />
+              <span>Seguir</span>
+            </FollowButton>
+          </Stats>
+          <Question>
+            <textarea
+              name="question"
+              id="question"
+              rows="3"
+              placeholder="Faça-me uma pergunta"
+            />
+            <QuestionButton>
+              <span>Enviar</span>
+            </QuestionButton>
+          </Question>
+        </ProfileInfo>
 
-          <TimeLine />
-        </Content>
-      </UserProfile>
+        <TimelineSelector>
+          <Selector
+            to="/profile"
+            className="focused"
+            onClick={() => setNewFocus('respostas')}
+            id="respostas"
+          >
+            <span>Respostas</span>
+          </Selector>
+          <Selector
+            to="/profile"
+            onClick={() => setNewFocus('perguntas')}
+            id="perguntas"
+          >
+            <span>Perguntas</span>
+          </Selector>
+          <Selector
+            to="/profile"
+            onClick={() => setNewFocus('curtidas')}
+            id="curtidas"
+          >
+            <span>Curtidas</span>
+          </Selector>
+        </TimelineSelector>
 
-      <BottomBar />
-    </Wrapper>
+        <TimeLine />
+      </Content>
+    </UserProfile>
   );
 }

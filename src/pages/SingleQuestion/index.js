@@ -6,13 +6,10 @@ import { FaRegHeart } from 'react-icons/fa';
 
 import changeAddressBarColor from '../../components/changeAddressBarColor';
 
-import Header from '../../components/Header';
-import BottomBar from '../../components/BottomBar';
 import PageBar from '../../components/PageBar';
 import UserListModal from '../../components/UserListModal';
 
 import {
-  Wrapper,
   Content,
   Container,
   Section,
@@ -43,71 +40,63 @@ export default function SingleQuestion() {
   }
 
   return (
-    <Wrapper>
-      <Header />
-
-      <Content>
-        <PageBar name="Pergunta" />
-        <Container>
-          <Section>
-            <Info>
-              <Link to="/home">
-                <img
-                  src="https://api.adorable.io/avatars/285/abott@adorablb.png"
-                  alt="img"
-                />
-              </Link>
-              <QuestionContent>
-                <UserInfo>
-                  <Link to="/home">
-                    <Name>Bellatrix</Name>
-                    <User>@anab_leao</User>
-                  </Link>
-                </UserInfo>
-                <QuestionText>O que você acha do Cobus?</QuestionText>
-              </QuestionContent>
-            </Info>
-            <Time>8:36 PM · 31 de mar de 2020</Time>
-          </Section>
-
-          <Separator />
-
-          <Section>
-            <Info>
-              <AnswerContent>
-                <UserInfo>
-                  <Link to="/profile">
-                    <Name>V.</Name>
-                    <AnswerUser>@v1eira</AnswerUser>
-                  </Link>
-                </UserInfo>
-                <AnswerText>Po, maluco brabo d+. Toca muito!</AnswerText>
-              </AnswerContent>
-              <Link to="/profile">
-                <img
-                  src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
-                  alt="img"
-                />
-              </Link>
-            </Info>
-            <AnswerFooter>
-              <AnswerTime>17:28 PM · 01 de abr de 2020</AnswerTime>
-              <span>-</span>
-              <Likes>
-                <Link className="heart" to="/question">
-                  <FaRegHeart color="#666" />
+    <Content>
+      <PageBar name="Pergunta" />
+      <Container>
+        <Section>
+          <Info>
+            <Link to="/home">
+              <img
+                src="https://api.adorable.io/avatars/285/abott@adorablb.png"
+                alt="img"
+              />
+            </Link>
+            <QuestionContent>
+              <UserInfo>
+                <Link to="/home">
+                  <Name>Bellatrix</Name>
+                  <User>@anab_leao</User>
                 </Link>
-                <Count onClick={(e) => openModal(e, 'likes')}>
-                  14 Curtidas
-                </Count>
-                <UserListModal name="Curtidas" id="likes" />
-              </Likes>
-            </AnswerFooter>
-          </Section>
-        </Container>
-      </Content>
+              </UserInfo>
+              <QuestionText>O que você acha do Cobus?</QuestionText>
+            </QuestionContent>
+          </Info>
+          <Time>8:36 PM · 31 de mar de 2020</Time>
+        </Section>
 
-      <BottomBar />
-    </Wrapper>
+        <Separator />
+
+        <Section>
+          <Info>
+            <AnswerContent>
+              <UserInfo>
+                <Link to="/profile">
+                  <Name>V.</Name>
+                  <AnswerUser>@v1eira</AnswerUser>
+                </Link>
+              </UserInfo>
+              <AnswerText>Po, maluco brabo d+. Toca muito!</AnswerText>
+            </AnswerContent>
+            <Link to="/profile">
+              <img
+                src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
+                alt="img"
+              />
+            </Link>
+          </Info>
+          <AnswerFooter>
+            <AnswerTime>17:28 PM · 01 de abr de 2020</AnswerTime>
+            <span>-</span>
+            <Likes>
+              <Link className="heart" to="/question">
+                <FaRegHeart color="#666" />
+              </Link>
+              <Count onClick={(e) => openModal(e, 'likes')}>14 Curtidas</Count>
+              <UserListModal name="Curtidas" id="likes" />
+            </Likes>
+          </AnswerFooter>
+        </Section>
+      </Container>
+    </Content>
   );
 }

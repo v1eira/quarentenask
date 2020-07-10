@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import {
@@ -21,36 +21,9 @@ export default function BottomBar() {
     }
   }
 
-  function highlightPageButton() {
-    switch (window.location.pathname) {
-      case '/home':
-        document.getElementById('bottom-home-btn').classList.add('focused');
-        break;
-      case '/search':
-        document.getElementById('bottom-search-btn').classList.add('focused');
-        break;
-      case '/trending':
-        document.getElementById('bottom-trending-btn').classList.add('focused');
-        break;
-      case '/profile':
-        document.getElementById('bottom-profile-btn').classList.add('focused');
-        break;
-      case '/notifications':
-        document
-          .getElementById('bottom-notification-btn')
-          .classList.add('focused');
-        break;
-      case '/inbox':
-        document.getElementById('bottom-inbox-btn').classList.add('focused');
-        break;
-      default:
-        break;
-    }
-  }
-
-  useEffect(() => {
-    highlightPageButton();
-  });
+  const same = (id) => {
+    return id === window.location.pathname.slice(1);
+  };
 
   return (
     <Container>
@@ -59,7 +32,7 @@ export default function BottomBar() {
           navigateTo('/home');
         }}
       >
-        <FaHome id="bottom-home-btn" />
+        <FaHome className={`${same('home') ? 'focused' : ''}`} />
       </NavButton>
 
       <NavButton
@@ -67,7 +40,7 @@ export default function BottomBar() {
           navigateTo('/search');
         }}
       >
-        <FaSearch id="bottom-search-btn" />
+        <FaSearch className={`${same('search') ? 'focused' : ''}`} />
       </NavButton>
 
       <NavButton
@@ -75,7 +48,7 @@ export default function BottomBar() {
           navigateTo('/trending');
         }}
       >
-        <FaChartLine id="bottom-trending-btn" />
+        <FaChartLine className={`${same('trending') ? 'focused' : ''}`} />
       </NavButton>
 
       <Badge
@@ -85,7 +58,7 @@ export default function BottomBar() {
           navigateTo('/inbox');
         }}
       >
-        <FaEnvelope id="bottom-inbox-btn" />
+        <FaEnvelope className={`${same('inbox') ? 'focused' : ''}`} />
       </Badge>
 
       <Badge
@@ -95,7 +68,7 @@ export default function BottomBar() {
           navigateTo('/notifications');
         }}
       >
-        <FaBell id="bottom-notification-btn" />
+        <FaBell className={`${same('notifications') ? 'focused' : ''}`} />
       </Badge>
 
       <NavButton
@@ -103,7 +76,7 @@ export default function BottomBar() {
           navigateTo('/profile');
         }}
       >
-        <FaUser id="bottom-profile-btn" />
+        <FaUser className={`${same('profile') ? 'focused' : ''}`} />
       </NavButton>
     </Container>
   );
