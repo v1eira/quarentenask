@@ -8,7 +8,7 @@ export const Container = styled.li`
   padding: 10px;
 
   box-shadow: ${(props) =>
-    props.theme.title === 'light' ? '0px 2px 8px -1px #999' : ''};
+    props.theme.title === 'light' ? '0px 2px 8px -2px #999' : ''};
 
   display: flex;
   flex-direction: column;

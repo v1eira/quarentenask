@@ -24,6 +24,11 @@ export const Content = styled.div`
 
 export const Container = styled.li`
   background: ${(props) => props.theme.colors.card};
+  border-bottom: 1px solid
+    ${(props) =>
+      props.theme.title === 'light'
+        ? props.theme.colors.border
+        : 'transparent'};
   width: calc(100% - 20px);
   padding: 15px 10px;
 

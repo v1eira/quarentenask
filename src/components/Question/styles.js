@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 export const Container = styled.li`
   background: ${(props) => props.theme.colors.card};
@@ -9,7 +9,7 @@ export const Container = styled.li`
   cursor: pointer;
 
   box-shadow: ${(props) =>
-    props.theme.title === 'light' ? '0px 2px 8px -1px #999' : ''};
+    props.theme.title === 'light' ? '0px 2px 8px -2px #999' : ''};
 
   display: flex;
   flex-direction: column;
@@ -29,7 +29,10 @@ export const Container = styled.li`
   }
 
   &:hover {
-    background: ${(props) => lighten(0.02, props.theme.colors.card)};
+    background: ${(props) =>
+      props.theme.title === 'light'
+        ? darken(0.05, props.theme.colors.card)
+        : lighten(0.02, props.theme.colors.card)};
   }
 
   @media (max-width: 800px) {
