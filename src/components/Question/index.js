@@ -42,7 +42,7 @@ export default function Question() {
       <QuestionInfo>
         <Link onClick={(e) => handleClick(e, '/home')}>
           <img
-            src="https://api.adorable.io/avatars/285/abott@adorablb.png"
+            src="https://pbs.twimg.com/profile_images/1579423064244330496/bvbCtf-K_400x400.jpg"
             alt="img"
             className="user-img"
           />
@@ -50,8 +50,8 @@ export default function Question() {
         <QuestionContent>
           <UserInfo>
             <Link onClick={(e) => handleClick(e, '/home')}>
-              <Name>Bellatrix</Name>
-              <User>@anab_leao</User>
+              <Name>Jana</Name>
+              <User>@janainassevero</User>
               <span>-</span>
               <Time>2 h</Time>
             </Link>
@@ -85,7 +85,7 @@ export default function Question() {
         </AnswerContent>
         <Link onClick={(e) => handleClick(e, '/profile')}>
           <img
-            src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
+            src="https://pbs.twimg.com/profile_images/1630660451775270912/tVCoQmBG_400x400.jpg"
             alt="img"
             className="user-img"
           />

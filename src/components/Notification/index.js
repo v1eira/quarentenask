@@ -33,16 +33,16 @@ export default function Notification() {
           <User>
             <Link onClick={(e) => handleClick(e, '/home')}>
               <img
-                src="https://api.adorable.io/avatars/285/abott@adorablb.png"
+                src="https://pbs.twimg.com/profile_images/1579423064244330496/bvbCtf-K_400x400.jpg"
                 alt="img"
               />
             </Link>
             <UserTag onClick={(e) => handleClick(e, '/home')}>
-              @anab_leao
+              @janainassevero
             </UserTag>
           </User>
           <Message>
-            <Name>Bellatrix</Name> curtiu sua resposta
+            <Name>Jana</Name> curtiu sua resposta
           </Message>
         </Content>
       </Item>

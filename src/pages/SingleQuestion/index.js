@@ -43,15 +43,15 @@ export default function SingleQuestion() {
           <Info>
             <Link to="/home">
               <img
-                src="https://api.adorable.io/avatars/285/abott@adorablb.png"
+                src="https://pbs.twimg.com/profile_images/1579423064244330496/bvbCtf-K_400x400.jpg"
                 alt="img"
               />
             </Link>
             <QuestionContent>
               <UserInfo>
                 <Link to="/home">
-                  <Name>Bellatrix</Name>
-                  <User>@anab_leao</User>
+                  <Name>Jana</Name>
+                  <User>@janainassevero</User>
                 </Link>
               </UserInfo>
               <QuestionText>O que você acha do Cobus?</QuestionText>
@@ -75,7 +75,7 @@ export default function SingleQuestion() {
             </AnswerContent>
             <Link to="/profile">
               <img
-                src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
+                src="https://pbs.twimg.com/profile_images/1630660451775270912/tVCoQmBG_400x400.jpg"
                 alt="img"
               />
             </Link>

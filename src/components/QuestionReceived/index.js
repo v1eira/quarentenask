@@ -33,7 +33,7 @@ export default function QuestionReceived() {
       <QuestionInfo>
         <Link onClick={(e) => handleClick(e, '/home')}>
           <img
-            src="https://api.adorable.io/avatars/285/abott@adorablb.png"
+            src="https://pbs.twimg.com/profile_images/1579423064244330496/bvbCtf-K_400x400.jpg"
             alt="img"
             className="user-img"
           />
@@ -41,8 +41,8 @@ export default function QuestionReceived() {
         <QuestionContent>
           <UserInfo>
             <Link onClick={(e) => handleClick(e, '/home')}>
-              <Name>Bellatrix</Name>
-              <User>@anab_leao</User>
+              <Name>Jana</Name>
+              <User>@janainassevero</User>
               <span>-</span>
               <Time>2 h</Time>
             </Link>

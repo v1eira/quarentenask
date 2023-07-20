@@ -103,12 +103,12 @@ function EditProfileModal({ toggleTheme }) {
         <UserInfo>
           <Images>
             <img
-              src="https://pbs.twimg.com/profile_banners/1103890260205887488/1552027687/1500x500"
+              src="https://pbs.twimg.com/profile_banners/1103890260205887488/1679068418/600x200"
               alt="cover"
               className="banner"
             />
             <img
-              src="https://pbs.twimg.com/profile_images/1236710786061524994/JcWN0IOE_400x400.jpg"
+              src="https://pbs.twimg.com/profile_images/1630660451775270912/tVCoQmBG_400x400.jpg"
               alt="profile"
               className="profile-image"
             />
