@@ -85,7 +85,7 @@ export default function Question() {
         </AnswerContent>
         <Link onClick={(e) => handleClick(e, '/profile')}>
           <img
-            src="https://pbs.twimg.com/profile_images/1630660451775270912/tVCoQmBG_400x400.jpg"
+            src="https://pbs.twimg.com/profile_images/1691291409695825920/fYLa7FB9_400x400.jpg"
             alt="img"
             className="user-img"
           />
