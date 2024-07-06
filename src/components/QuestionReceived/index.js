@@ -33,7 +33,7 @@ export default function QuestionReceived() {
       <QuestionInfo>
         <Link onClick={(e) => handleClick(e, '/home')}>
           <img
-            src="https://pbs.twimg.com/profile_images/1579423064244330496/bvbCtf-K_400x400.jpg"
+            src="https://static.vecteezy.com/system/resources/thumbnails/019/896/012/small_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
             alt="img"
             className="user-img"
           />

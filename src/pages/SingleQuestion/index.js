@@ -43,7 +43,7 @@ export default function SingleQuestion() {
           <Info>
             <Link to="/home">
               <img
-                src="https://pbs.twimg.com/profile_images/1579423064244330496/bvbCtf-K_400x400.jpg"
+                src="https://static.vecteezy.com/system/resources/thumbnails/019/896/012/small_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
                 alt="img"
               />
             </Link>
@@ -75,7 +75,7 @@ export default function SingleQuestion() {
             </AnswerContent>
             <Link to="/profile">
               <img
-                src="https://pbs.twimg.com/profile_images/1691291409695825920/fYLa7FB9_400x400.jpg"
+                src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
                 alt="img"
               />
             </Link>

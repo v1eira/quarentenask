@@ -108,7 +108,7 @@ function EditProfileModal({ toggleTheme }) {
               className="banner"
             />
             <img
-              src="https://pbs.twimg.com/profile_images/1691291409695825920/fYLa7FB9_400x400.jpg"
+              src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
               alt="profile"
               className="profile-image"
             />
